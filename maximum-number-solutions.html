@@ -1,0 +1,1870 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Detailed Single Post</title>
+
+<!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" type="image/png" href="img/small-logo-01.png">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,900italic,700italic,700,500italic,400italic,500,300italic,300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<style>
+
+/*-------------------------*/
+/* FONT BDD */
+/*-------------------------*/
+
+@font-face {
+    font-family: 'socialicoregular';
+    src: url('font/socialico-webfont.eot');
+    src: url('font/socialico-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/socialico-webfont.woff2') format('woff2'),
+         url('font/socialico-webfont.woff') format('woff'),
+         url('font/socialico-webfont.ttf') format('truetype'),
+         url('font/socialico-webfont.svg#socialicoregular') format('svg');
+}
+
+@font-face {
+    font-family: 'socialico_plusregular';
+    src: url('font/socialico_plus-webfont.eot');
+    src: url('font/socialico_plus-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/socialico_plus-webfont.woff2') format('woff2'),
+         url('font/socialico_plus-webfont.woff') format('woff'),
+         url('font/socialico_plus-webfont.ttf') format('truetype'),
+         url('font/socialico_plus-webfont.svg#socialico_plusregular') format('svg');
+}
+
+
+.disable-hover {
+	pointer-events: none;
+}
+
+img{vertical-align:bottom;}
+
+a {
+	text-decoration:none;
+}
+
+ul { 
+	list-style-type: none; 
+	margin:0;
+	padding:0;
+}
+
+.anim-1,.anim-2{display:none;}
+
+/*-------------------------*/
+/* MAIN TRANSITION FOR EFFECT HOVER*/
+/*-------------------------*/
+
+.object {
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out; /** Chrome & Safari **/
+    -moz-transition: all 0.25s ease-in-out; /** Firefox **/
+    -o-transition: all 0.25s ease-in-out; /** Opera **/
+}
+
+/*----------------------------*/
+/* BODY SETTINGS */
+/*----------------------------*/
+
+body,html{
+	padding:0;margin:0;
+	background-color:#F4F4F4;
+}
+
+.cache{
+	width:100%;
+	height:100%;
+	position:absolute;
+	background-color:#FFF;
+	z-index:1000;
+}
+
+/*----------------------------*/
+/* CUSTOM SCROLLBAR  */
+/*----------------------------*/
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+ 
+::-webkit-scrollbar-track {
+    background:#eee;
+    border: thin solid lightgray;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1) inset;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background:#999;
+    border: thin solid gray;
+}
+
+/*----------------------------*/
+/* HEADER BLACK TOP WITH LOGO */
+/*----------------------------*/
+
+
+#wrapper-header{
+	float:left;
+	width:105%;
+	height:65px;
+	background-color:#2E2D30;
+	opacity:0;
+}
+
+#main-header{
+	position:relative;
+	width:1200px;
+	left:50%;
+	margin-left:-600px;
+	height:auto;
+}
+
+#logo{
+	position:absolute;
+    margin-top:13.5px;
+	left:15px;
+	cursor:pointer;
+}
+
+#stripes{
+	background: url(img/stripes.svg) no-repeat;
+	position:absolute;
+	width:27px;
+	height:20px;
+	right:15px;
+	top:22.5px;
+	cursor:pointer;
+	display:none;
+}
+
+#logo img{height:100%;width:100%;}
+
+/*----------------------------*/
+/* SUB NAV BAR */
+/*----------------------------*/
+
+#wrapper-navbar{
+	float:left;
+	width:100%;
+	height:0px;
+	background-color:#FFF;
+	border-bottom:solid #EDEDED 1px;
+	opacity:0;
+}
+
+.navbar{
+	position:relative;
+	width:1200px;
+	left:50%;
+	margin-left:-600px;
+	height:100%;
+	top:0;
+}
+
+.top-rated,.recent,.oldies{
+	float:left;
+	text-align:left;
+	font-family: 'Roboto',sans-serif;
+    font-size: 13px;
+	height:40px;
+	line-height:40px;
+    margin-top:10px;
+	cursor:pointer;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	text-transform: uppercase;
+	letter-spacing:1.5px;
+}
+
+.top-rated{color:#666;margin-left:15px;font-weight:500;}
+.recent,.oldies{color: #CCC;margin-left:80px;font-weight:500;margin-left:40px;}
+
+.top-rated:hover,.recent:hover,.oldies:hover{color:#666;opacity:1;}
+
+#fleche-nav-1,#fleche-nav-2,#fleche-nav-3{
+	float:left;
+	margin-top:26px;
+	background: url(img/fleche-nav.svg) no-repeat ;
+	width:5px;
+	height:10px;
+	margin-left:5px;
+}
+
+#fleche-nav-2,#fleche-nav-3{opacity:0.5;}
+
+#wrapper-bouton-icon{display:block;}
+#bouton-ai,#bouton-psd,#bouton-photo,#bouton-font,#bouton-theme,#bouton-premium{
+	float:right;
+	width:28px;
+	height:28px;
+	margin-top:16px;
+	margin-right:15px;
+	cursor:pointer;
+	opacity:1;
+	 transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+}
+
+#bouton-ai:hover,#bouton-psd:hover,#bouton-photo:hover,#bouton-font:hover,#bouton-theme:hover,#bouton-premium:hover{opacity:0.5;transform: scale(1.2);}
+
+#bouton-ai img,#bouton-psd img,#bouton-photo img,#bouton-font img,#bouton-theme img,#bouton-premium img{width:100%;height:100%;}
+
+/*----------------------------*/
+/* MAIN DIV */
+/*----------------------------*/
+
+#wrapper-container{
+	float:left;
+	width:100%;
+	height:auto;
+}
+
+.container,.container-footer {
+    position:relative;
+    width: 1200px;
+    margin-left:-600px;
+    left:50%;
+}
+
+/*----------------------------*/
+/* MENU SIDE */
+/*----------------------------*/
+
+#main-container-menu {
+	position:fixed;
+    width:100%;
+    height:100%;
+	left:-100%;
+	background-color:rgba(34, 34, 34, 0.95);
+	z-index:1000;
+}
+
+.container-menu{
+	position:relative;
+	height:100%;
+	width:100%;
+}
+
+/*----------------------------*/
+/* CROSS */
+/*----------------------------*/
+
+#main-cross{
+	float:left;
+	min-height:53px;
+	width:100%;
+	margin-bottom:50px;
+}
+
+#cross-menu{
+	position:absolute;
+	width:18px;
+	height:18px;
+	right:25px;
+	margin-top:25px;
+	background: url(img/cross-menu.svg) no-repeat;
+	cursor:pointer;
+}
+
+/*----------------------------*/
+/* SMALL LOGO */
+/*----------------------------*/
+
+#main-small-logo{
+	float:left;
+	min-height:53px;
+	width:100%;
+	margin-bottom:25px;
+}
+
+.small-logo{
+	position:absolute;
+	width:131px;
+	height:53px;
+	left:50%;
+	margin-left:-65.5px;
+	background: url(img/small-logo.svg) no-repeat;
+}
+
+/*----------------------------*/
+/* MAIN DIV WITH IMAGE */
+/*----------------------------*/
+
+#main-container-image {
+    float:left;
+    width:100%;
+    height:auto;
+	background-color:#F4F4F4;
+	margin-top:25px;
+	opacity:0;
+
+}
+
+.work figure-single {
+    float:left;
+	width:60%;
+	margin-left:7.5%;
+    height:auto;
+    padding: 0 !important;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+	-webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
+	box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
+	background-color:#FFF;
+}
+
+.work figure-single img {
+    height: 95%;
+    width: 95%;
+	margin-left:2.5%;
+	margin-top:2.5%;
+}
+
+#wrapper-part-info{
+	position:relative;
+	width:100%;
+	height:auto;
+	background-color:#FFFFFF;
+}
+
+.part-info-image-single{
+	float:left;
+	margin-bottom:17.5px;
+}
+#wrapper-part-info .part-info-image img{height:20%;width:20%;}
+
+.wrapper-text-description{
+	position:absolute;
+	width:20%;
+	right:7.5%;
+	height:auto;
+	margin-top:85px;	
+}
+
+.wrapper-view,.wrapper-file,.wrapper-weight,.wrapper-desc,.wrapper-download{
+	float:left;
+	width:100%;
+	border-bottom:solid #E0E0E0 1px;
+}
+.wrapper-file,.wrapper-weight,.wrapper-desc,.wrapper-download{
+	border-top:solid #FFF 1px;
+}
+.wrapper-morefrom{
+	float:left;
+	width:100%;
+	border-top:solid #FFF 1px;
+}
+.wrapper-view,.wrapper-file,.wrapper-weigh,.wrapper-download,.wrapper-morefrom{height:40px;}
+.wrapper-desc,.wrapper-morefrom{height:auto;}
+
+.icon-view,.icon-file,.icon-weight,.icon-desc,.icon-download{
+	float:left;
+	left:0;
+	margin-right:25px;
+}
+.icon-view{margin-top:10px;}
+.icon-file{margin-top:9px;margin-left:2px;}
+.icon-weight{margin-top:8px;margin-left:2px;}
+.icon-desc{margin-top:7px;}
+.icon-download{margin-top:6px;margin-left:3px;}
+
+.icon-view img,.icon-file img,.icon-weight img,.icon-desc img,.icon-download img{height:100%;width:100%;}
+
+.text-view,.text-file,.text-weight,.text-desc,.text-download{
+	float:left;
+	text-align:left;
+	font-family: Helvetica, sans-serif;
+    font-size: 15px;
+	font-weight:400;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	color:#A1A1A1;
+}
+.text-view,.text-file,.text-weight,.text-download{
+	height:40px;
+	line-height:40px;
+}
+.text-desc{
+	width:calc(100% - 49px);
+	line-height:130%;
+	height:auto;
+	margin-bottom:25px;
+	margin-top:10px;
+}
+
+.text-download a{
+	color:#A1A1A1;
+	transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out; 
+    -moz-transition: all 0.2s ease-in-out; 
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.text-download a:hover{color:#666;}
+
+.text-morefrom{
+	float:left;
+	text-align:left;
+	font-family: Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+	font-weight:600;
+	color:#686868;
+	width:100%;
+	margin-left:0;
+	line-height:130%;
+	height:auto;
+	margin-bottom:0;
+	margin-top:20px;
+}
+
+.image-morefrom{
+	float:left;
+	width:100%;
+	margin-top:20px;
+	height:auto;
+	margin-bottom:35px;
+}
+
+.image-morefrom-1,.image-morefrom-2,.image-morefrom-3,.image-morefrom-4{
+	float:left;
+	width:47.5%;
+	height:auto;
+	-webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
+	box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
+	background-color:#FFF;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	cursor:pointer;
+}
+
+.image-morefrom-1,.image-morefrom-3{margin-right:5%;}
+.image-morefrom-1,.image-morefrom-2{margin-bottom:12.5px;}
+
+.image-morefrom-1 img,.image-morefrom-2 img,.image-morefrom-3 img,.image-morefrom-4 img{
+	width:85%;
+	height:auto;
+	margin-left:7.5%;
+	padding-bottom:7.5%;
+	padding-top:7.5%;
+}
+.image-morefrom-1:hover,.image-morefrom-2:hover,.image-morefrom-3:hover,.image-morefrom-4:hover{opacity:0.5;}
+
+.post-reply,.post-reply-2{
+	float:left;
+	width:60%;
+	margin-left:7.5%;
+    height:auto;
+}
+
+.post-reply{margin-top:50px;}
+
+.image-reply-post,.image-reply-post-2{
+	float:left;
+	width:65px;
+	height:65px;
+	background: url(img/avatar.png) no-repeat;
+	top:0;	
+}
+
+.image-reply-post{background: url(img/avatar.png) no-repeat;}
+.image-reply-post-2{background: url(img/avatar-2.png) no-repeat;}
+
+.name-reply-post,.name-reply-post-2{
+	float:left;
+	width:calc(100% - 95px);
+	font-family: Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+	font-weight:600;
+	color:#686868;
+	line-height:65px;
+	height:65px;
+	padding-left:30px;
+}
+
+.text-reply-post,.text-reply-post-2{
+	float:left;
+	text-align:left;
+	height:auto;
+	line-height:140%;
+	margin-left:95px;
+	width:calc(90% - 95px);
+	font-family: Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+	font-weight:400;
+	color:#999;
+	margin-top:-10px;
+	border-bottom:solid #E9E9E9 1px;
+	padding:20px;
+	margin-top:-20px;
+}
+
+.post-send{
+	float:left;
+	width:60%;
+	margin-left:7.5%;
+	height:auto;
+	margin-bottom:25px;
+}
+
+#main-post-send{
+	float:left;
+	width:calc(90% - 160px);
+	margin-left:95px;
+	height:auto;
+	margin-top:0px;
+}
+
+#title-post-send{
+	font-family: Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+	font-weight:600;
+	color:#686868;
+	line-height:65px;
+	height:65px;
+	position:relative;
+}
+
+textarea {
+    font-family: Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+	font-weight:400;
+	color:#999;
+	width: 320px;
+	height: 150px;
+	background:#FFF;
+	outline:none;
+	border:solid 1px #DDDDDD;
+	border-radius:4px;
+	padding-left:10px;
+	padding-top:10px;
+	float:left;
+	margin-left:-15px;
+	margin-top:-25px;
+}
+
+input[type=submit] {
+	font-family: Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+	font-weight:600;
+	color:#FFF;
+	cursor: pointer;
+	width: 150px;
+	height: 40px;
+	padding: 5px 10px;
+	border-radius:4px;
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out; /** Chrome & Safari **/
+	-moz-transition: all 0.5s ease-in-out; /** Firefox **/
+	-o-transition: all 0.5s ease-in-out; /** Opera **/
+	background-color:#74BDEC;
+	float:left;
+	border:none;
+}
+
+fieldset {
+	border:none;
+}
+
+textarea { 
+	resize: vertical;
+    max-height:100px; 
+    min-height:100px;
+}
+
+textarea {
+    color: #999;
+}
+ 
+textarea:-moz-placeholder {
+    color: #999;
+}
+ 
+textarea::-webkit-input-placeholder {
+    color: #999;
+}
+ 
+textarea.placeholder {
+    color: #999;
+}
+
+.title-item{
+	float:left;
+	width:92.5%;
+	margin-left:7.5%;
+	height:68px;
+	margin-bottom:10px;
+}
+
+.title-icon{
+	float:left;
+	width:68px;
+	height:68px;
+	background: url(img/title-icon-ps.svg) no-repeat;
+	margin-right:20px;
+}
+
+.title-text{
+	font-family: Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 22px;
+	font-weight:600;
+	color:#686868;
+	line-height:125%;
+	height:auto;
+	width:calc(100% - 88px);
+	margin-top:8px;
+}
+
+.title-text-2{
+	font-family: Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 15px;
+	font-weight:400;
+	color:#A1A1A1;
+	line-height:125%;
+	height:auto;
+	width:calc(100% - 88px);
+	margin-top:8px;
+}
+
+
+/*----------------------------*/
+/* BIG TITLE RESSOURCE FOR THE HIDDEN MENU */
+/*----------------------------*/
+
+#main-premium-ressource,#main-themes,#main-psd,#main-ai,#main-font,#main-photo{
+	float:left;
+	width:100%;
+	min-height:36px;
+
+}
+
+.premium-ressource,.themes,.psd,.ai,.font,.photo{
+	position:relative;
+	text-align:center;
+	font-family: Helvetica, sans-serif;
+    font-size: 16px;
+	font-weight:400;
+	height:36px;
+	line-height:36px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.premium-ressource a,.themes a,.psd a,.ai a,.font a,.photo a{
+	transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out; 
+    -moz-transition: all 0.2s ease-in-out; 
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.premium-ressource a,.themes a,.psd a,.photo a,.font a,.ai a{color:#999;}
+
+.premium-ressource a:hover{color:#CCC;}
+.themes a:hover{color:#66CC7A;}
+.psd a:hover{color:#2B9ED8;}
+.photo a:hover{color:#56514C;}
+.font a:hover{color:#B88DFF;}
+.ai a:hover{color:#FF9000;}
+
+/*----------------------------*/
+/* THX PART AND OLDNEW   */
+/*----------------------------*/
+
+#wrapper-thank{
+	float:left;
+	width:100%;
+	height:190px;
+	background-color:#F2F2F2;
+	margin-top:40px;
+}
+
+#wrapper-oldnew{
+	float:left;
+	width:100%;
+	height:80px;
+	background-color:#F4F4F4;
+	margin-top:50px;
+}
+
+.thank,.oldnew{
+	position:relative;
+	width:1200px;
+	left:50%;
+	margin-left:-600px;
+	height:100%;
+	top:0;
+}
+
+.thank-text{
+	float:left;
+	text-align:center;
+	font-family: 'Pacifico', cursive;
+    font-size: 70px;
+	height:190px;
+	line-height:190px;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	color:#B3B3B3;
+	font-weight:400;
+	width:100%;
+}
+
+/*----------------------------*/
+/* FOOTER */
+/*----------------------------*/
+
+#main-container-footer{
+	float:left;
+	width:100%;
+	height:auto;
+	background-color:#F9F9F9;
+	border-top:solid #F1F1F1 1px;
+	-webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.1);
+
+}
+
+#row-1f,#row-2f,#row-3f,#row-4f{
+	float:left;
+	width:calc(100% / 4);
+	height:auto;
+}
+
+.text-row-1f,.text-row-2f,.text-row-3f,.text-row-4f{
+	float:left;
+	text-align:left;
+	height:140%;
+	line-height:140%;
+	margin-left:20px;
+	width:80%;
+	text-align:left;
+	font-family: Helvetica, sans-serif;
+    font-size: 14px;
+	font-weight:400;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	color:#A1A1A1;
+	margin-top:80px;
+}
+.text-row-1f,.text-row-2f,.text-row-3f{
+	margin-bottom:100px;
+}
+
+/*----------------------------*/
+/* NEWSLETTER*/
+/*----------------------------*/
+
+#main_tip_newsletter{
+	float:left;
+	width:100%;
+	height:auto;
+	margin-top:20px;
+}
+
+#tip_newsletter_input
+{
+    font: 15px/1.6 Helvetica, sans-serif;
+	color: #CCC;
+	padding: 5px 5px 5px 46px;
+	width: 170px;
+	border:solid 2px #CCC;
+	border-radius: 5px;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+    box-shadow: none; 
+	outline: 0;
+	background: url(img/icon-newsletter.svg) no-repeat 10px 9px;
+	margin-left:20px;
+	vertical-align:center;
+	font-weight:400;
+}
+
+/*----------------------------*/
+/* SEARCH */
+/*----------------------------*/
+
+#main_tip_search{
+	float:right;
+	width:170px;
+	margin-top:13px;
+	height:auto;
+	margin-right:25px;
+	display:block;
+}
+
+#tip_search_input{
+    font: 16px/1.6 'Roboto',sans-serif;
+	color: #686868;
+	padding: 4px 4px 4px 46px;
+	width: 170px;
+	border:solid 1px #FFF;
+	border-radius: 5px;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+    box-shadow: none; 
+	outline: 0;
+	margin: 0;
+	background: url(img/icon-search.svg) no-repeat 12px 7px;
+	vertical-align:center;
+	margin-left:-40px;
+	background-color:#FFF;
+}
+
+#loupe{
+	position:absolute;
+	background: url(img/loupe.svg) no-repeat;
+	width:28px;
+	height:30px;
+	right:20px;
+	top:94px;
+	cursor:pointer;
+	opacity:1;
+}
+
+/*----------------------------*/
+/* COPYRIGHT PART IN BLACK DOWN*/
+/*----------------------------*/
+
+#wrapper-copyright{
+	float:left;
+	width:100%;
+	height:70px;
+	background-color:#2E2D30;
+}
+
+.copyright{
+	position:relative;
+	width:1200px;
+	left:50%;
+	margin-left:-600px;
+	height:100%;
+	top:0;
+}
+
+.copy-text{
+	float:left;
+	text-align:left;
+	font-family: 'Roboto',sans-serif;
+    font-size: 15px;
+	height:70px;
+	line-height:70px;
+	cursor:pointer;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	color:#666;
+	margin-left:15px;
+	font-weight:500;
+}
+
+.wrapper-navbouton{
+	position:absolute;
+	height:100%;
+	right:0;
+}
+
+.google,.facebook,.dribbble,.linkin{
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	text-align:right;
+	font-family:'socialicoregular';
+    font-size: 44px;
+	height:70px;
+	line-height:70px;
+	float:right;
+	opacity:0.5;
+	cursor:pointer;
+	float:right;
+	color:#666;
+	opacity:1;
+}
+
+.dribbble,.facebook,.linkin,.google{padding-right:20px;}
+.dribbble,.facebook,.linkin{padding-right:12px;}
+
+.linkin:hover,.google:hover,.facebook:hover,.dribbble:hover{color:#CCC;transform: scale(1.2);}
+
+/*----------------------------*/
+/* RWD */
+/*----------------------------*/
+
+/* Others wide screen -2 */
+ 
+@media only screen and (max-width: 2000px) {
+#main-container-menu {
+	display:none;
+}
+}
+
+/* Others wide screen */
+ 
+@media only screen and (max-width: 1200px) {
+#main-header,.navbar,.container,.container-footer,.thank,.oldnew,.copyright {
+	width:940px;
+	margin-left:-465px;
+}
+#main-container-menu {
+	display:none;
+}
+}
+
+/* Small viewports — Old monitors, netbooks, tablets (landscape), etc. */
+ 
+@media only screen and (max-width: 965px) {
+#main-header,.navbar,.container,.container-footer,.thank,.oldnew,.copyright {
+	width:835px;
+	margin-left:-417.5px;
+}
+#main-container-menu {
+	display:none;
+}
+#row-1f,#row-2f,#row-3f,#row-4f{
+	width:100%;
+}
+.text-row-1f,.text-row-2f,.text-row-3f,.text-row-4f{
+	text-align:center;
+	width:70%;
+	margin-left:15%;
+}
+.text-row-1f{
+	margin-top:75px;
+	margin-bottom:35px;
+}
+.text-row-4f{
+	margin-top:0;
+	margin-bottom:0;
+}
+.text-row-2f,.text-row-3f{
+	margin-bottom:35px;
+	margin-top:0;
+}
+#tip_newsletter_input{
+	position:relative;
+	left:50%;
+	margin-left:-112.5px;
+	margin-bottom:75px;
+}
+.work figure,.post-reply,.post-reply-2,.title-item,.post-send {
+	margin-left:15px;
+}
+.wrapper-text-description{
+	right:15px;
+	width:30%;
+}
+
+}
+
+/* Smaller viewports — more tablets, old monitors */
+ 
+@media only screen and (max-width: 860px) {
+#main-header,.navbar,.container,.container-footer,.thank,.oldnew,.copyright {
+	width:715px;
+	margin-left:-357.5px;
+}
+#main-container-menu {
+	display:none;
+}
+.part-info-image-single{
+	margin-bottom:11px;
+}
+
+}
+
+/* Even smaller viewports — more tablets, etc. */
+ 
+@media only screen and (max-width: 740px) {
+#main-header,.navbar,.container,.container-footer,.thank,.oldnew,.copyright {
+	width:585px;
+	margin-left:-292.5px;
+}   
+#wrapper-bouton-icon,#main_tip_search,#text-search {
+	display:none;
+}
+#stripes {
+	display:block;
+}
+#main-container-menu {
+	display:block;
+}
+.work figure {
+	width:calc(100% - 30px);
+	margin-left:15px;
+}
+.wrapper-text-description{
+	width:calc(100% - 30px);
+	float:left;
+	position: relative;
+	right:0;
+	margin-left:15px;
+	margin-top:25px;
+}
+.image-morefrom-1 img,.image-morefrom-2 img,.image-morefrom-3 img,.image-morefrom-4 img{
+	width:90%;
+	height:auto;
+	margin-left:5%;
+	padding-bottom:5%;
+	padding-top:5%;
+}
+.post-send,.post-reply,.post-reply-2{
+	width:calc(100% - 30px);
+	margin-left:15px;
+}
+}
+
+/* Mobile phones (Landscape) and Tablets (Portrait) */
+ 
+@media only screen and (max-width: 610px) {
+#main-header,.navbar,.container,.container-footer,.thank,.oldnew,.copyright {
+	width:455px;
+	margin-left:-227.5px;
+} 
+#wrapper-sorting{
+	position:relative;
+	width:300px;
+	left:50%;
+	margin-left:-165px;
+}
+.top-rated,.recent,.oldies{
+	text-align:center;
+	font-family: 'Roboto',sans-serif;
+    font-size: 13px;
+	height:40px;
+	line-height:40px;
+	margin-left:25px;
+}
+.part-info-image-single{
+	float:left;
+	margin-bottom:17px;
+}
+#wrapper-part-info .part-info-image img{
+	height:92%;
+	width:92%;
+	margin-left:4%;
+}
+.work figure img {
+    height: 92%;
+    width: 92%;
+	margin-left:4%;
+	margin-top:4%;
+}
+
+}
+
+/* Mobile phones (Landscape) and Tablets (Portrait) */
+ 
+@media only screen and (max-width: 480px) {
+#main-header,.navbar,.container,.container-footer,.thank,.oldnew,.copyright {
+	width:295px;
+	margin-left:-147.5px;
+}
+.work figure {
+	width:calc(100% - 30px);
+}
+.wrapper-navbouton{
+	display:none;
+}
+.copy-text{
+	text-align:center;
+	width:100%;
+}
+.thank-text{
+    font-size: 50px;
+}
+.title-item{
+	width:calc(100% - 30px);
+	margin-left:15px;
+}
+.title-icon{
+	margin-right:10px;
+}
+.title-text{
+    font-size: 22px;
+	width:100%;
+	margin-top:8px;
+}
+.part-info-image-single{
+	float:left;
+	margin-bottom:15px;
+}
+#wrapper-part-info .part-info-image img{
+	height:90%;
+	width:90%;
+	margin-left:5%;
+}
+.work figure img {
+    height: 90%;
+    width: 90%;
+	margin-left:5%;
+	margin-top:5%;
+}
+
+.name-reply-post,.name-reply-post-2{
+	width:calc(100% - 75px);
+	padding-left:10px;
+}
+
+.text-reply-post,.text-reply-post-2{
+	margin-left:15px;
+	width:calc(100% - 30px);
+	padding-top:0;
+	padding-left:0;
+	padding-right:0;
+	padding-bottom:25px;
+	margin-top:20px;
+}
+
+.post-reply-2{margin-top:25px;}
+
+#main-post-send{
+	width:calc(100% - 30px);
+	margin-left:15px;
+}
+
+textarea {
+	width: calc(100% + 15px);
+}
+}
+/* Mobile phones (iphone4/5)*/
+ 
+@media only screen and (max-width: 320px) {
+
+}
+
+
+
+</style>
+
+</head>
+
+<body>
+
+<a name="ancre"></a>
+
+<!-- CACHE -->
+<div class="cache"></div>
+
+<!-- HEADER -->
+
+<div id="wrapper-header">
+	<div id="main-header" class="object">
+		<a href="index.html"><div id="logo"><img src="img/apnwiki_logo1.png" alt="logo burstfly" height="38" width="90"></div></a>
+        <div id="main_tip_search"> 
+			<form>
+				<input type="text" name="search" id="tip_search_input" list="search" autocomplete=off required>
+			</form>
+		</div>
+        <div id="stripes"></div>
+    </div>
+</div>
+
+<!-- NAVBAR -->
+
+<div id="wrapper-navbar">
+		<div class="navbar object">
+    		<div id="wrapper-sorting">
+            <div id="wrapper-title-1">
+            <div class="top-rated object">Top-rated</div>
+            	<div id="fleche-nav-1"></div>
+    		</div>
+            
+            <div id="wrapper-title-2">
+            <a href="#"><div class="recent object">Recent</div></a>
+                <div id="fleche-nav-2"></div>
+    		</div>
+            
+            <div id="wrapper-title-3">
+            <a href="#"><div class="oldies object">Oldies</div></a>
+                <div id="fleche-nav-3"></div>
+    		</div>
+            </div>
+            <div id="wrapper-bouton-icon">
+            	<div id="bouton-ai"><img src="img/icon-ai.svg" alt="illustrator" title="Illustrator" height="28" width="28"></div>
+            	<div id="bouton-psd"><img src="img/icon-psd.svg" alt="photoshop" title="Photoshop" height="28" width="28"></div>
+            	<div id="bouton-theme"><img src="img/icon-themes.svg" alt="theme" title="Theme" height="28" width="28"></div>
+            	<div id="bouton-font"><img src="img/icon-font.svg" alt="font" title="Font" height="28" width="28"></div>
+            	<div id="bouton-photo"><img src="img/icon-photo.svg" alt="photo" title="Photo" height="28" width="28"></div>
+            	<div id="bouton-premium"><img src="img/icon-premium.svg" alt="premium" title="Premium" height="28" width="28"></div>
+			</div>
+    	</div>
+    </div>
+
+<!-- FILTER -->	
+
+	<div id="main-container-menu" class="object">
+    	<div class="container-menu">
+        	
+            <div id="main-cross">
+            	<div id="cross-menu"></div>
+            </div>
+            
+            <div id="main-small-logo">
+            	<div class="small-logo"></div>
+            </div>
+            
+            <div id="main-premium-ressource">
+                <div class="premium-ressource"><a href="#">Premium Resources</a></div>
+            </div>
+            
+            <div id="main-themes">
+                <div class="themes"><a href="#">Latest themes</a></div>
+            </div>
+            
+            <div id="main-psd">
+                <div class="psd"><a href="#">PSD Goodies</a></div>
+            </div>
+                
+            <div id="main-ai">
+                <div class="ai"><a href="#">Illustrator freebies</a></div>
+            </div>
+            
+            <div id="main-font">
+                <div class="font"><a href="#">Free fonts</a></div>
+            </div>
+            
+            <div id="main-photo">
+                <div class="photo"><a href="#">Free stock photos</a></div>
+            </div>
+            
+        </div>
+    </div>
+
+
+<!-- PORTFOLIO -->
+
+	<div id="wrapper-container">
+    
+		<div class="container object">
+
+			<div id="main-container-image">
+            	
+                <div class="title-item">
+                	<div class="title-icon"></div>
+                    <div class="title-text">Maximum Number of Solutions Table</div>
+                    <div class="title-text-2">by Mandi S. Maxwell , 2005</div>
+                </div>
+
+                <div class="table">
+                	<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-s6z2{text-align:center}
+.tg .tg-e3zv{font-weight:bold}
+.tg .tg-hgcj{font-weight:bold;text-align:center}
+.tg .tg-9hbo{font-weight:bold;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-e3zv">$\mathbb{F}_{2^{n}}$</th>
+    <th class="tg-hgcj">$d$</th>
+    <th class="tg-hgcj">$\Delta$$f$</th>
+    <th class="tg-9hbo">Cyclotomic Cosets</th>
+    <th class="tg-9hbo">References</th>
+  </tr>
+  <tr>
+    <td class="tg-031e">$\mathbb{F}_{2^{2}}$</td>
+    <td class="tg-s6z2">3<br>1</td>
+    <td class="tg-s6z2">2<br>4</td>
+    <td class="tg-yw4l">3<br>(1 2)</td>
+    <td class="tg-yw4l">Gold</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">$\mathbb{F}_{2^{3}}$</td>
+    <td class="tg-s6z2">3<br>1</td>
+    <td class="tg-s6z2">2<br>8</td>
+    <td class="tg-yw4l">(3 6 5)<br>(1 2 4)</td>
+    <td class="tg-yw4l">Gold, Welch, Niho, Field Inverse</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">$\mathbb{F}_{2^{4}}$</td>
+    <td class="tg-s6z2">3<br>5<br>7<br>1</td>
+    <td class="tg-s6z2">2<br>4<br>4<br>16</td>
+    <td class="tg-yw4l">(3 6 12 9)<br>(5 10)<br>(7 14 13 11)<br>(1 2 4 8)</td>
+    <td class="tg-yw4l">Gold</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">$\mathbb{F}_{2^{5}}$</td>
+    <td class="tg-s6z2">3<br>5<br>7<br>11<br>15<br>1</td>
+    <td class="tg-s6z2">2<br>2<br>2<br>2<br>2<br>32</td>
+    <td class="tg-yw4l">(3 6 12 24 17)<br>(5 10 20 9 18)<br>(7 14 28 25 19)<br>(11 22 13 26 21)<br>(15 30 29 27 23) <br>(1 2 4 8 16)</td>
+    <td class="tg-yw4l">Gold<br>Gold, Niho<br>Welch<br>Kasami<br>Dobbertin, Field Inverse</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">$\mathbb{F}_{2^{6}}$</td>
+    <td class="tg-s6z2">3<br>5<br>13<br>31<br>7<br>9<br>15<br>11<br>23<br>27<br>21<br>1</td>
+    <td class="tg-s6z2">2<br>4<br>4<br>4<br>6<br>8<br>8<br>10<br>10<br>12<br>20<br>64</td>
+    <td class="tg-yw4l">(3 6 12 24 48 33)<br>(5 10 20 40 17 34)<br>(13 26 52 41 19 38)<br>(31 62 61 59 55 47)<br>(7 14 28 56 49 35)<br>(9 18 36)<br>(15 30 60 57 51 39)<br>(11 22 44 25 50 37)<br>(23 46 29 58 53 43)<br>(27 54 45)<br>(21 42)<br>(1 2 4 8 16 32)</td>
+    <td class="tg-yw4l">Gold</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">$\mathbb{F}_{2^{7}}$</td>
+    <td class="tg-s6z2">3<br>5<br>9<br>11<br>13<br>15<br>23<br>27<br>29<br>43<br>63<br>19<br>47<br>7<br>21<br>31<br>55<br>1</td>
+    <td class="tg-s6z2">2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>4<br>4<br>6<br>6<br>6<br>6<br>128</td>
+    <td class="tg-yw4l">(3 6 12 24 48 96 65)<br>(5 10 20 40 80 33 66)<br>(9 18 36 72 17 34 68)<br>(11 22 44 88 49 98 69)<br>(13 26 52 104 81 35 70)<br>(15 30 60 120 113 99 71)<br>(23 46 92 57 114 101 75)<br>(27 54 108 89 51 102 77)<br>(29 58 116 105 83 39 78)<br>(43 86 45 90 53 106 85)<br>(63 126 125 123 119 111 95)<br>(19 38 76 25 50 100 73)<br>(47 94 61 122 117 107 87)<br>(7 14 28 56 67 97 112)<br>(21 42 84 41 82 37 74)<br>(31 62 124 121 115 103 79)<br>(55 110 93 59 118 109 91)<br>(1 2 4 8 16 32 64)</td>
+    <td class="tg-yw4l">Gold<br>Gold<br>Gold<br>Welch<br>Kasami<br>Gold<br>Kasami<br>Gold<br>Niho<br>Gold<br>Field Inverse</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">$\mathbb{F}_{2^{8}}$</td>
+    <td class="tg-s6z2">3<br>9<br>39<br>5<br>21<br>95<br>111<br>127<br>7<br>25<br>37<br>63<br>11<br>29<br>13<br>55<br>59<br>15<br>45<br>17<br>19<br>23<br>31<br>47<br>53<br>61<br>91<br>119<br>27<br>43<br>87<br>51<br>85<br>1<br></td>
+    <td class="tg-s6z2">2<br>2<br>2<br>4<br>4<br>4<br>4<br>4<br>6<br>6<br>6<br>6<br>10<br>10<br>12<br>12<br>12<br>14<br>14<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>22<br>26<br>30<br>30<br>50<br>84<br>256</td>
+    <td class="tg-yw4l">(3 6 12 24 48 96 192 129)<br>(9 18 36 72 144 33 66 132)<br>(39 78 156 57 114 228 201 147)<br>(5 10 20 40 80 160 65 130)<br>(21 42 84 168 81 162 69 138)<br>(95 190 125 250 245 235 215 175)<br>(111 222 189 123 246 237 219 183)<br>(127 254 253 251 247 239 223 191)<br>(7 14 28 56 112 224 193 131)<br>(25 50 100 200 145 35 70 140)<br>(37 74 148 41 82 164 73 146)<br>(63 126 252 249 243 231 207 159)<br>(11 22 44 88 176 97 194 133)<br>(29 58 116 232 209 163 71 142)<br>(13 26 52 104 208 161 67 134)<br>(55 110 220 185 115 230 205 155)<br>(59 118 236 217 179 103 206 157)<br>(15 30 60 120 240 225 195 135)<br>(45 90 180 105 210 165 75 150)<br>(17 34 68 136)<br>(19 38 76 152 49 98 196 137)<br>(23 46 92 184 113 226 197 139)<br>(31 62 124 248 241 227 199 143)<br>(47 94 188 121 242 229 203 151)<br>(53 106 212 169 83 166 77 154)<br>(61 122 244 233 211 167 79 158)<br>(91 182 109 218 181 107 214 173)<br>(119 238 221 187)<br>(27 54 108 216 177 99 198 141)<br>(43 86 172 89 178 101 202 149)<br>(87 174 93 186 117 234 213 171)<br>(51 102 204 153)<br>(85 170)<br>(1 2 4 8 16 32 64 128)</td>
+    <td class="tg-yw4l">Gold<br>Gold<br>Kasami</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">$\mathbb{F}_{2^{9}}$</td>
+    <td class="tg-s6z2">3<br>5<br>13<br>17<br>19<br>27<br>31<br>47<br>59<br>87<br>103<br>171<br>255<br>45<br>125<br>7<br>21<br>35<br>61<br>63<br>83<br>91<br>111<br>117<br>119<br>175<br>9<br>11<br>15<br>23<br>25<br>29<br>39<br>41<br>43<br>51<br>53<br>57<br>79<br>85<br>93<br>95<br>107<br>109<br>123<br>127<br>187<br>191<br>239<br>55<br>75<br>77<br>223<br>37<br>183<br>73<br>219<br>1</td>
+    <td class="tg-s6z2">2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>4<br>4<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>20<br>20<br>20<br>20<br>26<br>26<br>72<br>72<br>512</td>
+    <td class="tg-yw4l">(3 6 12 24 48 96 192 384 257)<br>(5 10 20 40 80 160 320 129 258)<br>(13 26 52 104 208 416 321 131 262)<br>(17 34 68 136 272 33 66 132 264)<br>(19 38 76 152 304 97 194 388 265)<br>(27 54 108 216 432 353 195 390 269)<br>(31 62 124 248 496 481 451 391 271)<br>(47 94 188 376 241 482 453 395 279)<br>(59 118 236 472 433 355 199 398 285)<br>(87 174 348 185 370 229 458 405 299)<br>(103 206 412 313 115 230 460 409 307)<br>(171 342 173 346 181 362 213 426 341)<br>(255 510 509 507 503 495 479 447 383)<br>(45 90 180 360 209 418 325 139 278)<br>(125 250 500 489 467 423 335 159 318)<br>(7 14 28 56 112 224 448 385 259)<br>(21 42 84 168 336 161 322 133 266)<br>(35 70 140 280 49 98 196 392 273)<br>(61 122 244 488 465 419 327 143 286)<br>(63 126 252 504 497 483 455 399 287)<br>(83 166 332 153 306 101 202 404 297)<br>(91 182 364 217 434 357 203 406 301)<br>(111 222 444 377 243 486 461 411 311)<br>(117 234 468 425 339 167 334 157 314)<br>(119 238 476 441 371 231 462 413 315)<br>(175 350 189 378 245 490 469 427 343)<br>(9 18 36 72 144 288 65 130 260)<br>(11 22 44 88 176 352 193 386 261)<br>(15 30 60 120 240 480 449 387 263)<br>(23 46 92 184 368 225 450 389 267)<br>(25 50 100 200 400 289 67 134 268)<br>(29 58 116 232 464 417 323 135 270)<br>(39 78 156 312 113 226 452 393 275)<br>(41 82 164 328 145 290 69 138 276)<br>(43 86 172 344 177 354 197 394 277)<br>(51 102 204 408 305 99 198 396 281)<br>(53 106 212 424 337 163 326 141 282)<br>(57 114 228 456 401 291 71 142 284)<br>(79 158 316 121 242 484 457 403 295)<br>(85 170 340 169 338 165 330 149 298)<br>(93 186 372 233 466 421 331 151 302)<br>(95 190 380 249 498 485 459 407 303)<br>(107 214 428 345 179 358 205 410 309)<br>(109 218 436 361 211 422 333 155 310)<br>(123 246 492 473 435 359 207 414 317)<br>(127 254 508 505 499 487 463 415 319)<br>(187 374 237 474 437 363 215 430 349)<br>(191 382 253 506 501 491 471 431 351)<br>(239 478 445 379 247 494 477 443 375)<br>(55 110 220 440 369 227 454 397 283)<br>(75 150 300 89 178 356 201 402 293)<br>(77 154 308 105 210 420 329 147 294)<br>(223 446 381 251 502 493 475 439 367)<br>(37 74 148 296 81 162 324 137 274)<br>(183 366 221 442 373 235 470 429 347)<br>(73 146 292)<br>(219 438 365)<br>(1 2 4 8 16 32 64 128 256)</td>
+    <td class="tg-yw4l">Gold<br>Gold<br>Kasami<br>Gold<br>Niho, Welch<br>Niho, Welch<br>Gold<br>Kasami<br>Kasami<br>Kasami<br>Gold<br>Gold<br>Field Reverse</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">$\mathbb{F}_{2^{10}}$</td>
+    <td class="tg-s6z2">3<br>9<br>57<br>213<br>5<br>13<br>17<br>21<br>29<br>69<br>79<br>87<br>103<br>149<br>181<br>205<br>223<br>237<br>247<br>367<br>375<br>511<br>7<br>15<br>19<br>23<br>27<br>43<br>45<br>59<br>61<br>71<br>73<br>75<br>89<br>91<br>111<br>115<br>117<br>119<br>127<br>147<br>151<br>167<br>173<br>175<br>189<br>191<br>207<br>215<br>235<br>239<br>245<br>255<br>347<br>379<br>439<br>479<br>25<br>37<br>41<br>49<br>51<br>83<br>107<br>11<br>77<br>85<br>105<br>121<br>179<br>253<br>351<br>383<br>55<br>447<br>31<br>155<br>33<br>39<br>63<br>123<br>159<br>183<br>219<br>35<br>47<br>53<br>95<br>101<br>109<br>125<br>157<br>187<br>221<br>251<br>231<br>363<br>495<br>99<br>165<br>93<br>171<br>343<br>341<br>1</td>
+    <td class="tg-s6z2">2<br>2<br>2<br>2<br>4<br>4<br>4<br>4<br>4<br>4<br>4<br>4<br>4<br>4<br>4<br>4<br>4<br>4<br>4<br>4<br>4<br>4<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>12<br>12<br>30<br>30<br>32<br>32<br>32<br>32<br>32<br>32<br>32<br>34<br>34<br>34<br>34<br>34<br>34<br>34<br>34<br>34<br>34<br>34<br>42<br>42<br>42<br>62<br>62<br>92<br>122<br>124<br>340<br>1024</td>
+    <td class="tg-yw4l">(3 6 12 24 48 96 192 384 768 513)<br>(9 18 36 72 144 288 576 129 258 516)<br>(57 114 228 456 912 801 579 135 270 540)<br>(213 426 852 681 339 678 333 666 309 618)<br>(5 10 20 40 80 160 320 640 257 514)<br>(13 26 52 104 208 416 832 641 259 518)<br>(17 34 68 136 272 544 65 130 260 520)<br>(21 42 84 168 336 672 321 642 261 522)<br>(29 58 116 232 464 928 833 643 263 526)<br>(69 138 276 552 81 162 324 648 273 546)<br>(79 158 316 632 241 482 964 905 787 551)<br>(87 174 348 696 369 738 453 906 789 555)<br>(103 206 412 824 625 227 454 908 793 563)<br>(149 298 596 169 338 676 329 658 293 586)<br>(181 362 724 425 850 677 331 662 301 602)<br>(205 410 820 617 211 422 844 665 307 614)<br>(223 446 892 761 499 998 973 923 823 623)<br>(237 474 948 873 723 423 846 669 315 630)<br>(247 494 988 953 883 743 463 926 829 635)<br>(367 734 445 890 757 491 982 941 859 695)<br>(375 750 477 954 885 747 471 942 861 699)<br>(511 1022 1021 1019 1015 1007 991 959 895 767)<br>(7 14 28 56 112 224 448 896 769 515)<br>(15 30 60 120 240 480 960 897 771 519)<br>(19 38 76 152 304 608 193 386 772 521)<br>(23 46 92 184 368 736 449 898 773 523)<br>(27 54 108 216 432 864 705 387 774 525)<br>(43 86 172 344 688 353 706 389 778 533)<br>(45 90 180 360 720 417 834 645 267 534)<br>(59 118 236 472 944 865 707 391 782 541)<br>(61 122 244 488 976 929 835 647 271 542)<br>(71 142 284 568 113 226 452 904 785 547)<br>(73 146 292 584 145 290 580 137 274 548)<br>(75 150 300 600 177 354 708 393 786 549)<br>(89 178 356 712 401 802 581 139 278 556)<br>(91 182 364 728 433 866 709 395 790 557)<br>(111 222 444 888 753 483 966 909 795 567)<br>(115 230 460 920 817 611 199 398 796 569)<br>(117 234 468 936 849 675 327 654 285 570)<br>(119 238 476 952 881 739 455 910 797 571)<br>(127 254 508 1016 1009 995 967 911 799 575)<br>(147 294 588 153 306 612 201 402 804 585)<br>(151 302 604 185 370 740 457 914 805 587)<br>(167 334 668 313 626 229 458 916 809 595)<br>(173 346 692 361 722 421 842 661 299 598)<br>(175 350 700 377 754 485 970 917 811 599)<br>(189 378 756 489 978 933 843 663 303 606)<br>(191 382 764 505 1010 997 971 919 815 607)<br>(207 414 828 633 243 486 972 921 819 615)<br>(215 430 860 697 371 742 461 922 821 619)<br>(235 470 940 857 691 359 718 413 826 629)<br>(239 478 956 889 755 487 974 925 827 631)<br>(245 490 980 937 851 679 335 670 317 634)<br>(255 510 1020 1017 1011 999 975 927 831 639)<br>(347 694 365 730 437 874 725 427 854 685)<br>(379 758 493 986 949 875 727 431 862 701)<br>(439 878 733 443 886 749 475 950 877 731)<br>(479 958 893 763 503 1006 989 955 887 751)<br>(25 50 100 200 400 800 577 131 262 524)<br>(37 74 148 296 592 161 322 644 265 530)<br>(41 82 164 328 656 289 578 133 266 532)<br>(49 98 196 392 784 545 67 134 268 536)<br>(51 102 204 408 816 609 195 390 780 537)<br>(83 166 332 664 305 610 197 394 788 553)<br>(107 214 428 856 689 355 710 397 794 565)<br>(11 22 44 88 176 352 704 385 770 517)<br>(77 154 308 616 209 418 836 649 275 550)<br>(85 170 340 680 337 674 325 650 277 554)<br>(105 210 420 840 657 291 582 141 282 564)<br>(121 242 484 968 913 803 583 143 286 572)<br>(179 358 716 409 818 613 203 406 812 601)<br>(253 506 1012 1001 979 935 847 671 319 638)<br>(351 702 381 762 501 1002 981 939 855 687)<br>(383 766 509 1018 1013 1003 983 943 863 703)<br>(55 110 220 440 880 737 451 902 781 539)<br>( 447 894 765 507 1014 1005 987 951 879 735)<br>(31 62 124 248 496 992 961 899 775 527)<br>(155 310 620 217 434 868 713 403 806 589)<br>(33 66 132 264 528)<br>(39 78 156 312 624 225 450 900 777 531)<br>(63 126 252 504 1008 993 963 903 783 543)<br>(123 246 492 984 945 867 711 399 798 573)<br>(159 318 636 249 498 996 969 915 807 591)<br>(183 366 732 441 882 741 459 918 813 603)<br>(219 438 876 729 435 870 717 411 822 621)<br>(35 70 140 280 560 97 194 388 776 529)<br>(47 94 188 376 752 481 962 901 779 535)<br>(53 106 212 424 848 673 323 646 269 538)<br>(95 190 380 760 497 994 965 907 791 559)<br>(101 202 404 808 593 163 326 652 281 562)<br>(109 218 436 872 721 419 838 653 283 566)<br>(125 250 500 1000 977 931 839 655 287 574)<br>(157 314 628 233 466 932 841 659 295 590)<br>(187 374 748 473 946 869 715 407 814 605)<br>(221 442 884 745 467 934 845 667 311 622)<br>(251 502 1004 985 947 871 719 415 830 637)<br>(231 462 924 825 627)<br>(363 726 429 858 693)<br>(495 990 957 891 759)<br>(99 198 396 792 561)<br>(165 330 660 297 594)<br>(93 186 372 744 465 930 837 651 279 558)<br>(171 342 684 345 690 357 714 405 810 597)<br>(343 686 349 698 373 746 469 938 853 683)<br>(341 682)<br>(1 2 4 8 16 32 64 428 256 512)</td>
+    <td class="tg-yw4l">Gold<br>Gold<br>Kasami<br>Dobbertin</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">$\mathbb{F}_{2^{11}}$</td>
+    <td class="tg-s6z2">3<br>5<br>9<br>13<br>17<br>33<br>35<br>43<br>57<br>63<br>95<br>107<br>117<br>143<br>151<br>231<br>249<br>315<br>365<br>411<br>413<br>683<br>1023<br>79<br>109<br>183<br>251<br>367<br>463<br>695<br>703<br>7<br>11<br>15<br>21<br>29<br>31<br>37<br>47<br>49<br>51<br>53<br>55<br>67<br>71<br>73<br>75<br>81<br>83<br>85<br>99<br>101<br>103<br>111<br>113<br>121<br>125<br>127<br>137<br>139<br>149<br>153<br>155<br>157<br>159<br>167<br>171<br>173<br>179<br>181<br>185<br>187<br>189<br>191<br>201<br>203<br>205<br>213<br>215<br>217<br>219<br>221<br>223<br>229<br>247<br>255<br>293<br>295<br>301<br>307<br>309<br>311<br>317<br>319<br>331<br>333<br>335<br>339<br>341<br>343<br>347<br>351<br>359<br>371<br>373<br>375<br>379<br>381<br>383<br>423<br>427<br>443<br>469<br>471<br>475<br>477<br>479<br>491<br>493<br>495<br>507<br>511<br>687<br>727<br>731<br>735<br>751<br>763<br>767<br>879<br>887<br>959<br>991<br>19<br>25<br>27<br>39<br>41<br>45<br>61<br>77<br>87<br>91<br>105<br>119<br>123<br>141<br>147<br>163<br>165<br>175<br>199<br>211<br>233<br>235<br>237<br>239<br>349<br>363<br>415<br>429<br>431<br>439<br>501<br>503<br>699<br>895<br>59<br>93<br>169<br>243<br>303<br>509<br>245<br>447<br>23<br>69<br>115<br>207<br>253<br>299<br>437<br>759<br>89<br>445<br>1</td>
+    <td class="tg-s6z2">2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>4<br>4<br>4<br>4<br>4<br>4<br>4<br>4<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>10<br>10<br>10<br>10<br>10<br>10<br>16<br>16<br>22<br>22<br>22<br>22<br>22<br>22<br>22<br>22<br>88<br>88<br>2048</td>
+    <td class="tg-yw4l">(3 6 12 24 48 96 192 384 768 1536 1025)<br>(5 10 20 40 80 160 320 640 1280 513 1026)<br>(9 18 36 72 144 288 576 1152 257 514 1028)<br>(13 26 52 104 208 416 832 1664 1281 515 1030)<br>(17 34 68 136 272 544 1088 129 258 516 1032)<br>(33 66 132 264 528 1056 65 130 260 520 1040)<br>(35 70 140 280 560 1120 193 386 772 1544 1041)<br>(43 86 172 344 688 1376 705 1410 773 1546 1045)<br>(57 114 228 456 912 1824 1601 1155 263 526 1052)<br>(63 126 252 504 1008 2016 1985 1923 1799 1551 1055)<br>(95 190 380 760 1520 993 1986 1925 1803 1559 1071)<br>(107 214 428 856 1712 1377 707 1414 781 1562 1077)<br>(117 234 468 936 1872 1697 1347 647 1294 541 1082)<br>(143 286 572 1144 241 482 964 1928 1809 1571 1095)<br>(151 302 604 1208 369 738 1476 905 1810 1573 1099)<br>(231 462 924 1848 1649 1251 455 910 1820 1593 1139)<br>(249 498 996 1992 1937 1827 1607 1167 287 574 1148)<br>(315 630 1260 473 946 1892 1737 1427 807 1614 1181)<br>(365 730 1460 873 1746 1445 843 1686 1325 603 1206)<br>(411 822 1644 1241 435 870 1740 1433 819 1638 1229)<br>(413 826 1652 1257 467 934 1868 1689 1331 615 1230)<br>(683 1366 685 1370 693 1386 725 1450 853 1706 1365)<br>(1023 2046 2045 2043 2039 2031 2015 1983 1919 1791 1535)<br>(79 158 316 632 1264 481 962 1924 1801 1555 1063)<br>(109 218 436 872 1744 1441 835 1670 1293 539 1078)<br>(183 366 732 1464 881 1762 1477 907 1814 1581 1115)<br>(251 502 1004 2008 1969 1891 1735 1423 799 1598 1149)<br>(367 734 1468 889 1778 1509 971 1942 1837 1627 1207)<br>(463 926 1852 1657 1267 487 974 1948 1849 1651 1255)<br>(695 1390 733 1466 885 1770 1493 939 1878 1709 1371)<br>(703 1406 765 1530 1013 2026 2005 1963 1879 1711 1375)<br>(7 14 28 56 112 224 448 896 1792 1537 1027)<br>(11 22 44 88 176 352 704 1408 769 1538 1029)<br>(15 30 60 120 240 480 960 1920 1793 1539 1031)<br>(21 42 84 168 336 672 1344 641 1282 517 1034)<br>(29 58 116 232 464 928 1856 1665 1283 519 1038)<br>(31 62 124 248 496 992 1984 1921 1795 1543 1039)<br>(37 74 148 296 592 1184 321 642 1284 521 1042)<br>(47 94 188 376 752 1504 961 1922 1797 1547 1047)<br>(49 98 196 392 784 1568 1089 131 262 524 1048)<br>(51 102 204 408 816 1632 1217 387 774 1548 1049)<br>(53 106 212 424 848 1696 1345 643 1286 525 1050)<br>(55 110 220 440 880 1760 1473 899 1798 1549 1051)<br>(67 134 268 536 1072 97 194 388 776 1552 1057)<br>(71 142 284 568 1136 225 450 900 1800 1553 1059)<br>(73 146 292 584 1168 289 578 1156 265 530 1060)<br>(75 150 300 600 1200 353 706 1412 777 1554 1061)<br>(81 162 324 648 1296 545 1090 133 266 532 1064)<br>(83 166 332 664 1328 609 1218 389 778 1556 1065)<br>(85 170 340 680 1360 673 1346 645 1290 533 1066)<br>(99 198 396 792 1584 1121 195 390 780 1560 1073)<br>(101 202 404 808 1616 1185 323 646 1292 537 1074)<br>(103 206 412 824 1648 1249 451 902 1804 1561 1075)<br>(111 222 444 888 1776 1505 963 1926 1805 1563 1079)<br>(113 226 452 904 1808 1569 1091 135 270 540 1080)<br>(121 242 484 968 1936 1825 1603 1159 271 542 1084)<br>(125 250 500 1000 2000 1953 1859 1671 1295 543 1086)<br>(127 254 508 1016 2032 2017 1987 1927 1807 1567 1087)<br>(137 274 548 1096 145 290 580 1160 273 546 1092)<br>(139 278 556 1112 177 354 708 1416 785 1570 1093)<br>(149 298 596 1192 337 674 1348 649 1298 549 1098)<br>(153 306 612 1224 401 802 1604 1161 275 550 1100)<br>(155 310 620 1240 433 866 1732 1417 787 1574 1101)<br>(157 314 628 1256 465 930 1860 1673 1299 551 1102)<br>(159 318 636 1272 497 994 1988 1929 1811 1575 1103)<br>(167 334 668 1336 625 1250 453 906 1812 1577 1107)<br>(171 342 684 1368 689 1378 709 1418 789 1578 1109)<br>(173 346 692 1384 721 1442 837 1674 1301 555 1110)<br>(179 358 716 1432 817 1634 1221 395 790 1580 1113)<br>(181 362 724 1448 849 1698 1349 651 1302 557 1114)<br>(185 370 740 1480 913 1826 1605 1163 279 558 1116)<br>(187 374 748 1496 945 1890 1733 1419 791 1582 1117)<br>(189 378 756 1512 977 1954 1861 1675 1303 559 1118)<br>(191 382 764 1528 1009 2018 1989 1931 1815 1583 1119)<br>(201 402 804 1608 1169 291 582 1164 281 564 1124)<br>(203 406 812 1624 1201 355 710 1420 793 1586 1125)<br>(205 410 820 1640 1233 419 838 1676 1305 563 1126)<br>(213 426 852 1704 1361 675 1350 653 1306 565 1130)<br>(215 430 860 1720 1393 739 1478 909 1818 1589 1131)<br>(217 434 868 1736 1425 803 1606 1165 283 566 1132)<br>(219 438 876 1752 1457 867 1734 1421 795 1590 1133)<br>(221 442 884 1768 1489 931 1862 1677 1307 567 1134)<br>(223 446 892 1784 1521 995 1990 1933 1819 1591 1135)<br>(229 458 916 1832 1617 1187 327 654 1308 569 1138)<br>(247 494 988 1976 1905 1763 1479 911 1822 1597 1147)<br>(255 510 1020 2040 2033 2019 1991 1935 1823 1599 1151)<br>(293 586 1172 297 594 1188 329 658 1316 585 1170)<br>(295 590 1180 313 626 1252 457 914 1828 1609 1171)<br>(301 602 1204 361 722 1444 841 1682 1317 587 1174)<br>(307 614 1228 409 818 1636 1225 403 806 1612 1177)<br>(309 618 1236 425 850 1700 1353 659 1318 589 1178)<br>(311 622 1244 441 882 1764 1481 915 1830 1613 1179)<br>(317 634 1268 489 978 1956 1865 1683 1319 591 1182)<br>(319 638 1276 505 1010 2020 1993 1939 1831 1615 1183)<br>(331 662 1324 601 1202 357 714 1428 809 1618 1189)<br>(333 666 1332 617 1234 421 842 1684 1321 595 1190)<br>(335 670 1340 633 1266 485 970 1940 1833 1619 1191)<br>(339 678 1356 665 1330 613 1226 405 810 1620 1193)<br>(341 682 1364 681 1362 677 1354 661 1322 597 1194)<br>(343 686 1372 697 1394 741 1482 917 1834 1621 1195)<br>(347 694 1388 729 1458 869 1738 1429 811 1622 1197)<br>(351 702 1404 761 1522 997 1994 1941 1835 1623 1199)<br>(359 718 1436 825 1650 1253 459 918 1836 1625 1203)<br>(371 742 1784 921 1842 1637 1227 407 814 1628 1209)<br>(373 746 1492 937 1874 1701 1355 663 1326 605 1210)<br>(375 750 1500 953 1906 1765 1483 919 1838 1629 1211)<br>(379 758 1516 985 1970 1893 1739 1431 815 1630 1213)<br>(381 762 1524 1001 2002 1957 1867 1687 1327 607 1214)<br>(383 766 1532 1017 2034 2021 1995 1943 1839 1631 1215)<br>(423 846 1692 1337 627 1254 461 922 1844 1641 1235)<br>(427 854 1708 1369 691 1382 717 1434 821 1642 1237)<br>(443 886 1772 1497 947 1894 1741 1435 823 1646 1245)<br>(469 938 1876 1705 1363 679 1358 669 1338 629 1258)<br>(471 942 1884 1721 1395 743 1486 925 1850 1653 1259)<br>(475 950 1900 1753 1459 871 1742 1437 827 1654 1261)<br>(477 954 1908 1769 1491 935 1870 1693 1339 631 1262)<br>(479 958 1916 1785 1523 999 1998 1949 1851 1655 1263)<br>(491 982 1964 1881 1715 1383 719 1438 829 1658 1269)<br>(493 986 1972 1897 1747 1447 847 1694 1341 635 1270)<br>(495 990 1980 1913 1779 1511 975 1950 1853 1659 1271)<br>(507 1014 2028 2009 1971 1895 1743 1439 831 1662 1277)<br>(511 1022 2044 2041 2035 2023 1999 1951 1855 1663 1279)<br>(687 1374 701 1402 757 1514 981 1962 1877 1707 1367)<br>(727 1454 861 1722 1397 747 1494 941 1882 1717 1387)<br>(731 1462 877 1754 1461 875 1750 1453 859 1718 1389)<br>(735 1470 893 1786 1525 1003 2006 1965 1883 1719 1391)<br>(751 1502 957 1914 1781 1515 983 1966 1885 1723 1399)<br>(763 1526 1005 2010 1973 1899 1751 1455 863 1726 1405)<br>(767 1534 1021 2042 2037 2027 2007 1967 1887 1727 1407)<br>(879 1758 1469 891 1782 1517 987 1974 1901 1755 1463)<br>(887 1774 1501 955 1910 1773 1499 951 1902 1757 1467)<br>(959 1918 1789 1531 1015 2030 2013 1979 1911 1775 1503)<br>(991 1982 1917 1787 1527 1007 2014 1981 1915 1783 1519)<br>(19 38 76 152 304 608 1216 385 770 1540 1033)<br>(25 50 100 200 400 800 1600 1153 259 518 1036)<br>(27 54 108 216 432 864 1728 1409 771 1542 1037)<br>(39 78 156 312 624 1248 449 898 1796 1545 1043)<br>(41 82 164 328 656 1312 577 1154 261 522 1044)<br>(45 90 180 360 720 1440 833 1666 1285 523 1046)<br>(61 122 244 488 976 1952 1857 1667 1287 527 1054)<br>(77 154 308 616 1232 417 834 1668 1289 531 1062)<br>(87 174 348 696 1392 737 1474 901 1802 1557 1067)<br>(91 182 364 728 1456 865 1730 1413 779 1558 1069)<br>(105 210 420 840 1680 1313 579 1158 269 538 1076)<br>(119 238 476 952 1904 1761 1475 903 1806 1565 1083)<br>(123 246 492 984 1968 1889 1731 1415 783 1566 1085)<br>(141 282 564 1128 209 418 836 1672 1297 547 1094)<br>(147 294 588 1176 305 610 1220 393 786 1572 1097)<br>(163 326 652 1304 561 1122 197 394 788 1576 1105)<br>(165 330 660 1320 593 1186 325 650 1300 553 1106)<br>(175 350 700 1400 753 1506 965 1930 1813 1579 1111)<br>(199 398 796 1592 1137 227 454 908 1816 1585 1123)<br>(211 422 844 1688 1329 611 1222 397 794 1588 1129)<br>(233 466 932 1864 1681 1315 583 1166 285 570 1140)<br>(235 470 940 1880 1713 1379 711 1422 797 1594 1141)<br>(237 474 948 1896 1745 1443 839 1678 1309 571 1142)<br>(239 478 956 1912 1777 1507 967 1934 1821 1595 1143)<br>(349 698 1396 745 1490 933 1866 1685 1323 599 1198)<br>(363 726 1452 857 1714 1381 715 1430 813 1626 1205)<br>(415 830 1660 1273 499 998 1996 1945 1843 1639 1231)<br>(429 858 1716 1385 723 1446 845 1690 1333 619 1238)<br>(431 862 1724 1401 755 1510 973 1946 1845 1643 1239)<br>(439 878 1756 1465 883 1766 1485 923 1846 1645 1243)<br>(501 1002 2004 1961 1875 1703 1359 671 1342 637 1274)<br>(503 1006 2012 1977 1907 1767 1487 927 1854 1661 1275)<br>(699 1398 749 1498 949 1898 1749 1451 855 1710 1373)<br>(895 1790 1533 1019 2038 2029 2011 1975 1903 1759 1471)<br>(59 118 236 472 944 1888 1729 1411 775 1550 1053)<br>(93 186 372 744 1488 929 1858 1669 1291 535 1070)<br>(169 338 676 1352 657 1314 581 1162 277 554 1108)<br>(243 486 972 1944 1841 1635 1223 399 798 1596 1145)<br>(303 606 1212 377 754 1508 969 1938 1829 1611 1175)<br>(509 1018 2036 2025 2003 1959 1871 1695 1343 639 1278)<br>(245 490 980 1960 1873 1699 1351 655 1310 573 1146)<br>(447 894 1788 1529 1011 2022 1997 1947 1847 1647 1247)<br>(23 46 92 184 368 736 1472 897 1794 1541 1035)<br>(69 138 276 552 1104 161 322 644 1288 529 1058)<br>(115 230 460 920 1840 1633 1219 391 782 1564 1081)<br>(207 414 828 1656 1265 483 966 1932 1817 1587 1127)<br>(253 506 1012 2024 2001 1955 1863 1679 1311 575 1150)<br>(299 598 1196 345 690 1380 713 1426 805 1610 1173)<br>(437 874 1748 1449 851 1702 1357 667 1334 621 1242)<br>(759 1518 989 1978 1909 1771 1495 943 1886 1725 1403)<br>(89 178 356 712 1424 801 1602 1157 267 534 1068)<br>(445 890 1780 1513 979 1958 1869 1691 1335 623 1246)<br>(1 2 4 8 16 32 64 128 256 512 1024)</td>
+    <td class="tg-yw4l">Gold<br>Gold<br>Gold<br>Kasami<br>Gold<br>Gold<br>Welch<br>Kasami<br>Kasami<br>Gold<br>Kasami<br>Niho<br>Welch<br>Kasami<br>Kasami<br>Gold<br>Niho<br>Kasami<br>Gold<br>Gold<br>Kasami<br>Gold<br>Field Inverse</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">$\mathbb{F}_{2^{12}}$</td>
+    <td class="tg-s6z2">3<br>33<br>159<br>5<br>73<br>731<br>2047<br>7<br>145<br>187<br>327<br>341<br>343<br>363<br>425<br>447<br>489<br>699<br>749<br>763<br>847<br>853<br>943<br>957<br>959<br>1371<br>9<br>51<br>55<br>87<br>93<br>97<br>141<br>177<br>207<br>209<br>213<br>217<br>247<br>249<br>251<br>303<br>311<br>329<br>333<br>335<br>339<br>381<br>427<br>477<br>591<br>597<br>603<br>671<br>719<br>723<br>727<br>755<br>759<br>879<br>891<br>895<br>981<br>1023<br>1467<br>1527<br>1783<br>1983<br>11<br>37<br>43<br>59<br>69<br>81<br>85<br>99<br>119<br>123<br>133<br>149<br>155<br>157<br>163<br>179<br>183<br>201<br>283<br>291<br>295<br>307<br>309<br>313<br>359<br>365<br>371<br>373<br>431<br>485<br>491<br>613<br>629<br>667<br>717<br>831<br>877<br>925<br>941<br>955<br>1003<br>1019<br>1499<br>1535<br>13<br>27<br>101<br>111<br>115<br>153<br>171<br>215<br>223<br>247<br>279<br>297<br>299<br>367<br>403<br>423<br>461<br>479<br>493<br>607<br>621<br>627<br>635<br>703<br>747<br>927<br>1375<br>1391<br>1503<br>1791<br>15<br>75<br>89<br>125<br>165<br>243<br>255<br>285<br>345<br>375<br>415<br>435<br>501<br>509<br>615<br>669<br>687<br>885<br>951<br>1005<br>1455<br>17<br>19<br>25<br>31<br>47<br>49<br>61<br>77<br>83<br>139<br>143<br>167<br>173<br>181<br>199<br>203<br>227<br>229<br>241<br>287<br>301<br>349<br>355<br>377<br>383<br>409<br>413<br>437<br>467<br>475<br>503<br>511<br>619<br>623<br>661<br>679<br>691<br>829<br>859<br>871<br>887<br>983<br>1007<br>1013<br>1021<br>1399<br>1403<br>1519<br>1531<br>639<br>685<br>21<br>29<br>147<br>231<br>357<br>399<br>861<br>987<br>989<br>1407<br>23<br>53<br>107<br>109<br>113<br>121<br>151<br>169<br>211<br>233<br>361<br>407<br>421<br>743<br>767<br>863<br>893<br>991<br>35<br>175<br>239<br>245<br>275<br>277<br>281<br>595<br>875<br>1015<br>1775<br>1919<br>39<br>411<br>429<br>507<br>663<br>41<br>103<br>185<br>397<br>605<br>733<br>45<br>135<br>219<br>405<br>495<br>765<br>855<br>939<br>137<br>235<br>751<br>57<br>459<br>471<br>499<br>1471<br>63<br>189<br>441<br>463<br>487<br>693<br>65<br>67<br>71<br>95<br>127<br>191<br>195<br>221<br>253<br>445<br>457<br>505<br>599<br>695<br>701<br>725<br>757<br>1387<br>79<br>197<br>317<br>319<br>331<br>347<br>379<br>443<br>473<br>631<br>949<br>2015<br>715<br>1495<br>845<br>293<br>325<br>439<br>587<br>1463<br>91<br>637<br>589<br>1759<br>105<br>735<br>117<br>351<br>975<br>205<br>821<br>823<br>827<br>273<br>1911<br>315<br>455<br>1755<br>683<br>1367<br>585<br>819<br>1365<br>1</td>
+    <td class="tg-s6z2">2<br>2<br>2<br>4<br>4<br>4<br>4<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>10<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>12<br>14<br>14<br>14<br>14<br>14<br>14<br>14<br>14<br>14<br>14<br>14<br>14<br>14<br>14<br>14<br>14<br>14<br>14<br>14<br>14<br>14<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>16<br>18<br>18<br>20<br>20<br>20<br>20<br>20<br>20<br>20<br>20<br>20<br>20<br>22<br>22<br>22<br>22<br>22<br>22<br>22<br>22<br>22<br>22<br>22<br>22<br>22<br>22<br>22<br>22<br>22<br>22<br>34<br>34<br>34<br>34<br>34<br>34<br>34<br>34<br>34<br>34<br>34<br>34<br>38<br>38<br>38<br>38<br>38<br>40<br>40<br>40<br>40<br>40<br>40<br>44<br>44<br>44<br>44<br>44<br>44<br>44<br>44<br>46<br>46<br>46<br>56<br>56<br>56<br>58<br>58<br>62<br>62<br>62<br>62<br>62<br>62<br>64<br>64<br>64<br>64<br>64<br>64<br>64<br>64<br>64<br>64<br>64<br>64<br>64<br>64<br>64<br>64<br>64<br>64<br>76<br>76<br>76<br>76<br>76<br>76<br>76<br>76<br>76<br>76<br>76<br>76<br>82<br>82<br>84<br>88<br>88<br>88<br>88<br>88<br>90<br>90<br>94<br>94<br>104<br>104<br>116<br>116<br>194<br>196<br>196<br>196<br>208<br>272<br>308<br>314<br>454<br>602<br>462<br>462<br>584<br>818<br>1364<br>4096</td>
+    <td class="tg-yw4l">(3 6 12 24 48 96 192 384 768 1536)<br>(33 66 132 264 528 1056 2112 129 258 516 1032 2064)<br>(159 318 636 1272 2544 993 1986 3972 3849 3603 3111 2127)<br>(5 10 20 40 80 160 320 640 1280 2560 1025 2050)<br>(73 146 292 584 1168 2336 577 1154 2308 521 1042 2084)<br>(731 1462 2924 1753 3506 2917 1739 3478 2861 1627 3254 2413)<br>(2047 4094 4093 4091 4087 4079 4063 4031 3967 3839 3583 3071)<br>(7 14 28 56 112 224 448 896 1792 3584 3073 2051)<br>(145 290 580 1160 2320 545 1090 2180 265 530 1060 2120)<br>(187 374 748 1496 2992 1889 3778 3461 2827 1559 3118 2141)<br>(327 654 1308 2616 1137 2274 453 906 1812 3624 3153 2211)<br>(341 682 1364 2728 1361 2722 1349 2698 1301 2602 1109 2218)<br>(343 686 1372 2744 1393 2786 1477 2954 1813 3626 3157 2219)<br>(363 726 1452 2904 1713 3426 2757 1419 2838 1581 3162 2229)<br>(425 850 1700 3400 2705 1315 2630 1165 2330 565 1130 2260)<br>(447 894 1788 3576 3057 2019 4038 3981 3867 3639 3183 2271)<br>(489 978 1956 3912 3729 3363 2631 1167 2334 573 1146 2292)<br>(699 1398 2796 1497 2994 1893 3786 3477 2859 1623 3246 2397)<br>(749 1498 2996 1897 3794 3493 2891 1687 3374 2653 1211 2422)<br>(763 1526 3052 2009 4018 3941 3787 3479 2863 1631 3262 2429)<br>(847 1694 3388 2681 1267 2534 973 1946 3892 3689 3283 2471)<br>(853 1706 3412 2729 1363 2726 1357 2714 1333 2666 1237 2474)<br>(943 1886 3772 3449 2803 1511 3022 1949 3898 3701 3307 2519)<br>(957 1914 3828 3561 3027 1959 3918 3741 3387 2679 1263 2526)<br>(959 1918 3836 3577 3059 2023 4046 3997 3899 3703 3311 2527)<br>(1371 2742 1389 2778 1461 2922 1749 3498 2901 1707 3414 2733)<br>(9 18 36 72 144 288 576 1152 2304 513 1026 2052)<br>(51 102 204 408 816 1632 3264 2433 771 1542 3084 2073)<br>(55 110 220 440 880 1760 3520 2945 1795 3590 3085 2075)<br>(87 174 348 696 1392 2784 1473 2946 1797 3594 3093 2091)<br>(93 186 372 744 1488 2976 1857 3714 3333 2571 1047 2094)<br>(97 194 388 776 1552 3104 2113 131 262 524 1048 2096)<br>(141 282 564 1128 2256 417 834 1668 3336 2577 1059 2118)<br>(177 354 708 1416 2832 1569 3138 2181 267 534 1068 2136)<br>(207 414 828 1656 3312 2529 963 1926 3852 3609 3123 2151)<br>(209 418 836 1672 3344 2593 1091 2182 269 538 1076 2152)<br>(213 426 852 1704 3408 2721 1347 2694 1293 2586 1077 2154)<br>(217 434 868 1736 3472 2849 1603 3206 2317 539 1078 2156)<br>(237 474 948 1896 3792 3489 2883 1671 3342 2589 1083 2166)<br>(249 498 996 1992 3984 3873 3651 3207 2319 543 1086 2172)<br>(251 502 1004 2008 4016 3937 3779 3463 2831 1567 3134 2173)<br>(303 606 1212 2424 753 1506 3012 1929 3858 3621 3147 2199)<br>(311 622 1244 2488 881 1762 33524 2953 1811 3622 3149 2203)<br>(329 658 1316 2632 1169 2338 581 1162 2324 553 1106 2212)<br>(333 666 1332 2664 1233 2466 837 1674 3348 2601 1107 2214)<br>(335 670 1340 2680 1265 2530 965 1930 3860 3625 3155 2215)<br>(339 678 1356 2712 1329 2658 1221 2442 789 1578 3156 2217)<br>(381 762 1524 3048 2001 4002 3909 3723 3351 2607 1119 2238)<br>(427 854 1708 3416 2737 1379 2758 1421 2842 1589 3178 2261)<br>(477 954 1908 3816 3537 2979 1863 3726 3357 2619 1143 2286)<br>(591 1182 2364 633 1266 2532 969 1938 3876 3657 3219 2343)<br>(597 1194 2388 681 1362 2724 1353 2706 1317 2634 1173 2346)<br>(603 1206 2412 729 1458 2916 1737 3474 2853 1611 3222 2349)<br>(671 1342 2684 1273 2546 997 1994 3988 3881 3667 3239 2383)<br>(719 1438 2876 1657 3314 2533 971 1942 3884 3673 3251 2407)<br>(723 1446 2892 1689 3378 2661 1227 2454 813 1626 3252 2409)<br>(727 1454 2908 1721 3442 2789 1483 2966 1837 3674 3253 2411)<br>(755 1510 3020 1945 3890 3685 3275 2455 815 1630 3260 2425)<br>(759 1518 3036 1977 3954 3813 3531 2967 1839 3678 3261 2427)<br>(879 1758 3516 2937 1779 3558 3021 1947 3894 3693 3291 2487)<br>(891 1782 3564 3033 1971 3942 3789 3483 2871 1647 3294 2493)<br>(895 1790 3580 3065 2035 4070 4045 3995 3895 3695 3295 2495)<br>(981 1962 3924 3753 3411 2727 1359 2718 1341 2682 1269 2538)<br>(1023 2046 4092 4089 4083 4071 4047 3999 3903 3711 3327 2559)<br>(1467 2934 1773 3546 2997 1899 3798 3501 2907 1719 3438 2781)<br>(1527 3054 2013 4026 3957 3819 3543 2991 1887 3774 3453 2811)<br>(1783 3566 3037 1979 3958 3821 3547 2999 1903 3806 3517 2939)<br>(1983 3966 3837 3579 3063 2031 4062 4029 3963 3831 3567 3039)<br>(11 22 44 88 176 352 704 1408 2816 1537 3074 2053)<br>(37 74 148 296 592 1184 2368 641 1282 2564 1033 2066)<br>(43 86 172 344 688 1376 2752 1409 2818 1541 3082 2069)<br>(59 118 236 472 944 1888 3776 3457 2819 1543 3086 2077)<br>(69 138 276 552 1104 2208 321 642 1284 2568 1041 2082)<br>(81 162 324 648 1296 2592 1089 2178 261 522 1044 2088)<br>(85 170 340 680 1360 2720 1345 2690 1285 2570 1045 2090)<br>(99 198 396 792 1584 3168 2241 387 774 1548 3096 2097)<br>(119 238 476 952 1904 3808 3521 2947 1799 3598 3101 2107)<br>(123 246 492 984 1968 3936 3777 3459 2823 1551 3102 2109)<br>(133 266 532 1064 2128 161 322 644 1288 2576 1057 2114)<br>(149 298 596 1192 2384 673 1346 2692 1289 2578 1061 2122)<br>(155 310 620 1240 2480 865 1730 3460 2825 1555 3110 2125)<br>(157 314 628 1256 2512 929 1858 3716 3337 2579 1063 2126)<br>(163 326 652 1304 2608 1121 2242 389 778 1556 3112 2129)<br>(179 358 716 1432 2864 1633 3266 2437 779 1558 3116 2137)<br>(183 366 732 1464 2928 1761 3522 2949 1803 3606 3117 2139)<br>(201 402 804 1608 3216 2337 579 1158 2316 537 1074 2148)<br>(283 566 1132 2264 433 866 1732 3464 2833 1571 3142 2189)<br>(291 582 1164 2328 561 1122 2244 393 786 1572 3144 2193)<br>(295 590 1180 2360 625 1250 2500 905 1810 3620 3145 2495)<br>(307 614 1228 2456 817 1634 3268 2441 787 1574 3148 2201)<br>(309 618 1236 2472 849 1698 3396 2697 1299 2598 1101 2202)<br>(313 626 1252 2504 913 1826 3652 3209 2323 551 1102 2204)<br>(359 718 1436 2872 1649 3298 2501 907 1814 3628 3161 2227)<br>(365 730 1460 2920 1745 3490 2885 1675 3350 2605 1115 2230)<br>(371 742 1484 2968 1841 3682 3269 2443 791 1582 3164 2233)<br>(373 746 1492 2984 1873 3746 3397 2699 1303 2606 1117 2234)<br>(431 862 1724 3448 2801 1507 3014 1933 3866 3637 33179 2263)<br>(485 970 1940 3880 3665 3235 2375 655 1310 2620 1145 2290)<br>(491 982 1964 3928 3761 3427 2759 1423 2846 1597 3194 2293)<br>(613 1226 2452 809 1618 3236 2377 659 1318 2636 1177 2354)<br>(629 1258 2516 937 1874 3748 3401 2707 1319 2638 1181 2362)<br>(667 1334 2668 1241 2482 869 1738 3476 2857 1619 3238 2381)<br>(717 1434 2868 1641 3282 2469 843 1686 3372 2649 1203 2406)<br>(831 1662 3324 2553 1011 2022 4044 3993 3891 3687 3279 2463)<br>(877 1754 3508 2921 1747 3494 2893 1691 3382 2669 1243 2486)<br>(925 1850 3700 3305 2515 935 1870 3740 3385 2675 1255 2510)<br>(941 1882 3764 3433 2771 1447 2894 1693 3386 2677 1259 2518)<br>(955 1910 3820 3545 2995 1895 3790 3485 2875 1655 3310 2525)<br>(1003 2006 4012 3929 3763 3431 2767 1439 2878 1661 3322 2549)<br>(1019 2038 4076 4057 4019 3943 3791 3487 2879 1663 3326 2557)<br>(1499 2998 1901 3802 3509 2923 1751 3502 2909 1723 3446 2797)<br>(1535 3070 2045 4090 4085 4075 4055 4015 3935 3775 3455 2815)<br>(13 26 52 104 208 416 832 1664 3328 2561 1027 2054)<br>(27 54 108 216 432 864 1728 3456 2817 1539 3078 2061)<br>(101 202 404 808 1616 3232 2369 643 1286 2572 1049 2098)<br>(111 222 444 888 1776 3552 3009 1923 3846 3597 3099 2103)<br>(115 230 460 920 1840 3680 3265 2435 775 1550 3100 2105)<br>(153 306 612 1224 2448 801 1602 3204 2313 531 1062 2124)<br>(171 342 684 1368 2736 1377 2754 1413 2826 1557 3114 2133)<br>(215 430 860 1720 3440 2785 1475 2950 1805 3610 3125 2155)<br>(223 446 892 1784 3568 3041 1987 3974 3853 3611 3127 2159)<br>(247 494 988 1976 3952 3809 3523 2951 1807 3614 3133 2171)<br>(279 558 1116 2232 369 738 1476 2952 1809 3618 3141 2187)<br>(297 594 1188 2376 657 1314 2628 1161 2322 549 1098 2196)<br>(299 598 1196 2392 689 1378 2756 1417 2834 1573 3146 2197)<br>(367 734 1468 2936 1777 3554 3013 1931 3862 3629 3163 2231)<br>(403 806 1612 3224 2353 611 1222 2444 793 1586 3172 2249)<br>(423 846 1692 3384 2673 1251 2502 909 1818 3636 3177 2259)<br>(461 922 1844 3688 3281 2467 839 1678 3356 2617 1139 2278)<br>(479 958 1916 3832 3569 3043 1991 3982 3869 3643 3191 2287)<br>(493 986 1972 3944 3793 3491 2887 1679 3358 2621 1147 2294)<br>(607 1241 2428 761 1522 3044 1993 3986 3877 3659 3223 2351)<br>(621 1242 2484 873 1746 3492 2889 1683 3366 2637 1179 2358)<br>(627 1254 2508 921 1842 3684 3273 2451 807 1614 3228 2361)<br>(635 1270 2540 985 1970 3940 3785 3475 2855 1615 3230 2365)<br>(703 1406 2812 1529 3058 2021 4042 3989 3883 3671 3247 2399)<br>(747 1494 2988 1881 3762 3429 2763 1431 2862 1629 3258 2421)<br>(927 1854 3708 3321 2547 999 1998 3996 3897 3699 3303 2511)<br>(1375 2750 1405 2810 1525 3050 2005 4010 3925 3755 3415 2735)<br>(1391 2782 1469 2938 1781 3562 3029 1963 3926 3757 3419 2743)<br>(1503 3006 1917 3834 3573 3051 2007 4014 3933 3771 3447 2799)<br>(1791 3582 3069 2043 4086 4077 4059 4023 3951 3807 3519 2943)<br>(15 30 60 120 240 480 960 1920 3840 3585 3075 2055)<br>(75 150 300 600 1200 2400 705 1410 2820 1545 3090 2085)<br>(89 178 356 712 1424 2848 1601 3202 2309 523 1046 2092)<br>(125 250 500 1000 2000 4000 3905 3715 3335 2575 1055 2110)<br>(165 330 660 1320 2640 1185 2370 645 1290 2580 1065 2130)<br>(243 486 972 1944 3888 3681 3267 2439 783 1566 3132 2169)<br>(255 510 1020 2040 4080 4065 4035 3975 3855 3615 3135 2175)<br>(285 570 1140 2280 465 930 1860 3720 3345 2595 1095 2190)<br>(345 690 1380 2760 1425 2850 1605 3210 2325 555 1110 2220)<br>(375 750 1500 3000 1905 3810 3525 2955 1815 3630 3165 2235)<br>(415 830 1660 3320 2545 995 1990 3980 3865 3635 3175 2255)<br>(435 870 1740 3480 2865 1635 3270 2445 795 1590 3180 2265)<br>(501 1002 2004 4008 3921 3747 3399 2703 1311 2622 1149 2298)<br>(509 1018 2036 4072 4049 4003 3911 3727 3359 2623 1151 2302)<br>(615 1230 2460 825 1650 3300 2505 915 1830 3660 3225 2355)<br>(669 1338 2676 1257 2514 933 1866 3732 3369 2643 1191 2382)<br>(687 1374 2748 1401 2802 1509 3018 1941 3882 3669 3243 2391)<br>(885 1770 3540 2985 1875 3750 3405 2715 1335 2670 1245 2490)<br>(951 1902 3804 3513 2931 1767 3534 2973 1851 3702 3309 2523)<br>(1005 2010 4020 3945 3795 3495 2895 1695 3390 2685 1275 2550)<br>(1455 2910 1725 3450 2805 1515 3030 1965 3930 3765 3435 2775)<br>(17 34 68 136 272 544 1088 2176 257 514 1028 2056)<br>(19 38 76 152 304 608 1216 2432 769 1538 3076 2057)<br>(25 50 100 200 400 800 1600 3200 2305 515 1030 2060)<br>(31 62 124 248 496 992 1984 3968 3841 3587 3079 2063)<br>(47 94 188 376 752 1504 3008 1921 3842 3589 3083 2071)<br>(49 98 196 392 784 1568 3136 2177 259 518 1036 2072)<br>(61 122 244 488 976 1952 3904 3713 3331 2567 1039 2078)<br>(77 154 308 616 1232 2464 833 1666 3332 2569 1043 2086)<br>(83 166 332 664 1328 2656 1217 2434 773 1546 3092 2089)<br>(139 278 556 1112 2224 353 706 1412 2824 1553 3106 2117)<br>(143 286 572 1144 2288 481 962 1924 3848 3601 3107 2119)<br>(167 334 668 1336 2672 1249 2498 901 1802 3604 3113 2131)<br>(173 346 692 1384 2768 1441 2882 1669 3338 2581 1067 2134)<br>(181 362 724 1448 2896 1697 3394 2693 1291 2582 1069 2138)<br>(199 398 796 1592 3184 2273 451 902 1804 3608 3121 2147)<br>(203 406 812 1624 3248 2401 707 1414 2828 1561 3122 2149)<br>(227 454 908 1816 3632 3169 2243 391 782 1564 3128 2161)<br>(229 458 916 1832 3664 3233 2371 647 1294 2588 1081 2162)<br>(241 482 964 1928 3856 3617 3139 2183 271 542 1084 2168)<br>(287 574 1148 2296 497 994 1988 3976 3857 3619 3143 2191)<br>(301 602 1204 2408 721 1442 2884 1673 3346 2597 1099 2198)<br>(349 698 1396 2792 1489 2978 1861 3722 3349 2603 1111 2222)<br>(355 710 1420 2840 1585 3170 2245 395 790 1580 3160 2225)<br>(377 754 1508 3016 1937 3874 3653 3211 2327 559 1118 2236)<br>(383 766 1532 3064 2033 4066 4037 3979 3863 3631 3167 2239)<br>(409 818 1636 3272 2449 803 1606 3212 2329 563 1126 2252)<br>(413 826 1652 3304 2513 931 1862 3724 3353 2611 1127 2254)<br>(437 874 1748 3496 2897 1699 3398 2701 1307 2614 1133 2266)<br>(467 934 1868 3736 3377 2659 1223 2446 797 1594 3188 2281)<br>(475 950 1900 3800 3505 2915 1735 3470 2845 1595 3190 2285)<br>(503 1006 2012 4024 3953 3811 3527 2959 1823 3646 3197 2299)<br>(511 1022 2044 4088 4081 4067 4039 3983 3871 3647 3199 2303)<br>(619 1238 2476 857 1714 3428 2761 1427 2854 1613 3226 2357)<br>(623 1246 2492 889 1778 3556 3017 1939 3878 3661 3227 2359)<br>(661 1322 2644 1193 2386 677 1354 2708 1321 2642 1189 2378)<br>(679 1358 2716 1337 2674 1253 2506 917 1834 3668 3241 2387)<br>(691 1382 2764 1433 2866 1637 3274 2453 811 1622 3244 2393)<br>(829 1658 3316 2537 979 1958 3916 3737 3379 2663 1231 2462)<br>(859 1718 3436 2777 1459 2918 1741 3482 2869 1643 3286 2477)<br>(871 1742 3484 2873 1651 3302 2509 923 1846 3692 3289 2483)<br>(887 1774 3548 3001 1907 3814 3533 2971 1847 3694 3293 2491)<br>(983 1966 3932 3769 3443 2791 1487 2974 1853 3706 3317 2539)<br>(1007 2014 4028 3961 3827 3559 3023 1951 3902 3709 3323 2551)<br>(1013 2026 4052 4009 3923 3751 3407 2719 1343 2686 1277 2554)<br>(1021 2042 4084 4073 4051 4007 3919 3743 3391 2687 1279 2558)<br>(1399 2798 1501 3002 1909 3818 3541 2987 1879 3758 3421 2747)<br>(1403 2806 1517 3034 1973 3946 3797 3499 2903 1711 3422 2749)<br>(1519 3038 1981 3962 3829 3563 3031 1967 3934 3773 3451 2807)<br>(1531 3062 2029 4058 4021 3947 3799 3503 2911 1727 3454 2813)<br>(639 1278 2556 1017 2034 4068 4041 3987 3879 3663 3231 2367)<br>(685 1370 2740 1385 2770 1445 2890 1685 3370 2645 1195 2390)<br>(21 42 84 168 336 672 1344 2688 1281 2562 1029 2058)<br>(29 58 116 232 464 928 1856 3712 3329 2563 1031 2062)<br>(147 294 588 1176 2352 609 1218 2436 777 1554 3108 2121)<br>(231 462 924 1848 3696 3297 2499 903 1806 3612 3129 2163)<br>(357 714 1428 2856 1617 3234 2373 651 1302 2604 1113 2226)<br>(399 798 1596 3192 2289 483 966 1932 3864 3633 3171 2247)<br>(861 1722 3444 2793 1491 2982 1869 3738 3381 2667 1239 2478)<br>(987 1974 3948 3801 3507 2919 1743 3486 2877 1659 3318 2541)<br>(989 1978 3956 3817 3539 2983 1871 3742 3389 2683 1271 2542)<br>(1407 2814 1533 3066 2037 4074 4053 4011 3927 3759 3423 2751)<br>(23 46 92 184 368 736 1472 2944 1793 3586 3077 2059)<br>(53 106 212 424 848 1696 3392 2689 1283 2566 1037 2074)<br>(107 214 428 856 1712 3424 2753 1411 2822 1549 3098 2101)<br>(109 218 436 872 1744 3488 2881 1667 3334 2573 1051 2102)<br>(113 226 452 904 1808 3616 3137 2179 263 526 1052 2104)<br>(121 242 484 968 1936 3872 3649 3203 2311 527 1054 2108)<br>(151 302 604 1208 2416 737 1474 2948 1801 3602 3109 2123)<br>(169 338 676 1352 2704 1313 2626 1157 2314 533 1066 2132)<br>(211 422 844 1688 3376 2657 1219 2438 781 1562 3124 2153)<br>(233 466 932 1864 3728 3361 2627 1159 2318 541 1082 2164)<br>(361 722 1444 2888 1681 3362 2629 1163 2326 557 1114 2228)<br>(407 814 1628 3256 2417 739 1478 2956 1817 3634 3173 2251)<br>(421 842 1684 3368 2641 1187 2374 653 1306 2612 1129 2258)<br>(743 1486 2972 1849 3698 3301 2507 919 1838 3676 3257 2419)<br>(767 1534 3068 2041 4082 4069 4043 3991 3887 3679 3263 2431)<br>(863 1726 3452 2809 1523 3046 1997 3994 3893 3691 3287 2479)<br>(893 1786 3572 3049 2003 4006 3917 3739 3383 2671 1247 2494)<br>(991 1982 3964 3833 3571 3047 1999 3998 3901 3707 3319 2543)<br>(35 70 140 280 560 1120 2240 385 770 1540 3080 2065)<br>(175 350 700 1400 2800 1505 3010 1925 3850 3605 3115 2135)<br>(239 478 956 1912 3824 3553 3011 1927 3854 3613 3131 2167)<br>(245 490 980 1960 3920 3745 3395 2695 1295 2590 1085 2170)<br>(275 550 1100 2200 305 610 1220 2440 785 1570 3140 2185)<br>(277 554 1108 2216 337 674 1348 2696 1297 2594 1093 2186)<br>(281 562 1124 2248 401 802 1604 3208 2321 547 1094 2188)<br>(595 1190 2380 665 1330 2660 1225 2450 805 1610 3220 2345)<br>(875 1750 3500 2905 1715 3430 2765 1435 2870 1645 3290 2485)<br>(1015 2030 4060 4025 3955 3815 3535 2975 1855 3710 3325 2555)<br>(1775 3550 3005 1915 3830 3565 3035 1975 3950 3805 3515 2935)<br>(1919 3838 3581 3067 2039 4078 4061 4027 3959 3823 3551 3007)<br>(39 78 156 312 624 1248 2496 897 1794 3588 3081 2067)<br>(411 822 1644 3288 2481 867 1734 3468 2841 1587 3174 2253)<br>(429 858 1716 3432 2769 1443 2886 1677 3354 2613 1131 2262)<br>(507 1014 2028 4056 4017 3939 3783 3471 2847 1599 3198 2301)<br>(663 1326 2652 1209 2418 741 1482 2964 1833 3666 3237 2379)<br>(41 82 164 328 656 1312 2624 1153 2306 517 1034 2068)<br>(103 206 412 824 1648 3296 2497 899 1798 3596 3097 2099)<br>(185 370 740 1480 2960 1825 3650 3205 2315 535 1070 2140)<br>(397 794 1588 3176 2257 419 838 1676 3352 2609 1123 2246)<br>(605 1210 2420 745 1490 2980 1865 3730 3365 2635 1175 2350)<br>(733 1466 2932 1759 3538 2981 1867 3734 3373 2651 1207 2114)<br>(45 90 180 360 720 1440 2880 1665 3330 2565 1035 2070)<br>(135 270 540 1080 2160 225 450 900 1800 3600 3105 2115)<br>(219 438 876 1752 3504 2913 1731 3462 2829 1563 3126 2157)<br>(405 810 1620 3240 2385 675 1350 2700 1305 2610 1125 2250)<br>(495 990 1980 3960 3825 3555 3015 1935 3870 3645 3195 2295)<br>(765 1530 3060 2025 4050 4005 3915 3735 3375 2655 1215 2430)<br>(855 1710 3420 2745 1395 2790 1485 2970 1845 3690 3285 2475)<br>(939 1878 3756 3417 2739 1383 2766 1437 2874 1653 3306 2517)<br>(137 274 548 1096 2192 289 578 1156 2312 529 1058 2116)<br>(235 470 940 1880 3760 3425 2755 1415 2830 1565 3130 2165)<br>(751 1502 3004 1913 3826 3557 3019 1943 3886 3677 3259 2423)<br>(57 114 228 456 912 1824 3648 3201 2307 519 1038 2076)<br>(459 918 1836 3672 3249 2403 711 1422 2844 1593 3186 2277)<br>(471 942 1884 3768 3441 2787 1479 2958 1821 3642 3189 2283)<br>(499 998 1996 3992 3889 3683 33271 2447 799 1598 3196 2297)<br>(1471 2942 1789 3578 3061 2027 4054 4013 3931 3767 3439 2783)<br>(63 126 252 504 1008 2016 4032 3969 3843 3591 3087 2079)<br>(189 378 756 1512 3024 1953 3906 3717 3339 2583 1071 2142)<br>(441 882 1764 3528 2961 1827 3654 3213 2331 567 1134 2268)<br>(463 926 1852 3704 3313 2531 967 1934 3868 3641 3187 2279)<br>(487 974 1948 3896 3697 3299 2503 911 1822 3644 3193 2291)<br>(693 1386 2772 1449 2898 1701 33402 2709 1323 2646 1197 2394)<br>(65 130 260 520 1040 2080)<br>(67 134 268 536 1072 2144 193 386 772 1544 3088 2081)<br>(71 142 284 568 1136 2272 449 898 1795 3592 3089 2083)<br>(95 190 380 760 1520 3040 1985 3970 3845 3595 3095 2095)<br>(127 254 508 1016 2032 4064 4033 3971 3847 3599 3103 2111)<br>(191 382 764 1528 3056 2017 4034 3973 3851 3607 3119 2143)<br>(195 390 780 1560 3120 2145)<br>(221 442 884 1768 3536 2977 1859 3718 3341 2587 1079 2158)<br>(253 506 1012 2024 4048 4001 3907 3719 3343 2591 1087 2174)<br>(445 890 1780 3560 3025 1955 3910 3725 3355 2615 1135 2270)<br>(457 914 1828 3656 3217 2339 583 1166 2332 569 1138 2276)<br>(505 1010 2020 4040 3985 3875 3655 3215 2335 575 1150 2300)<br>(599 1198 2396 697 1394 2788 1481 2962 1829 3658 3221 2347)<br>(695 1390 2780 1465 2930 1765 3530 2965 1835 3670 3245 2395)<br>(701 1402 2804 1513 3026 1957 3914 3733 3371 2647 1199 2398)<br>(725 1450 2900 1705 3410 2725 1355 2710 1325 2650 1205 2410)<br>(757 1514 3028 1961 3922 3749 3403 2711 1327 2654 1213 2426)<br>(1387 2774 1453 2906 1717 3434 2773 1451 2902 1709 3418 2741)<br>(79 158 316 632 1264 2528 961 1922 3844 3593 3091 2087)<br>(197 394 788 1576 3152 2209 323 646 1292 2584 1073 2146)<br>(317 634 1268 2536 977 1954 3908 3721 3347 2599 1103 2206)<br>(319 638 1276 2552 1009 2018 4036 3977 3859 3623 3151 2207)<br>(331 662 1324 2648 1201 2402 709 1418 2836 1577 3154 2213)<br>(347 694 1388 2776 1457 2914 1733 3466 2837 1579 3158 2221)<br>(379 758 1516 3032 1969 3938 3781 3467 2839 1583 3166 2237)<br>(443 886 1772 3544 2993 1891 3782 3469 2843 1591 3182 2269)<br>(473 946 1892 3784 3473 2851 1607 3214 2333 571 1142 2284)<br>(631 1262 2524 953 1906 3812 3529 2963 1831 3662 3229 2363)<br>(949 1898 3796 3497 2899 1703 3406 2717 1339 2678 1261 2522)<br>(2015 4030 3965 3835 3575 3055)<br>(715 1430 2860 1625 3250 2405)<br>(1495 2990 1885 3770 3445 2795)<br>(845 1690 3380 2665 1235 2470)<br>(293 586 1172 2344 593 1186 2372 649 1298 2596 1097 2194)<br>(325 650 1300 2600 1105 2210)<br>(439 878 1756 3512 2929 1763 3526 2957 1819 3638 3181 2267)<br>(587 1174 2348 601 1202 2404 713 1426 2852 1609 2318 2341)<br>(1463 2926 1757 3514 2933 1771 3542 2989 1883 3766 3437 2779)<br>(91 182 364 728 1456 2912 1729 3458 2821 1547 3094 2093)<br>(637 1274 2548 1001 2002 4004 3913 3731 3367 2639 1183 2366)<br>(589 1178 2356 617 1234 2468 841 1682 3364 2633 1171 2342)<br>(1759 3518 2941 1787 3574 3053 2011 4022 3949 3803 3511 2927)<br>(105 210 420 840 1680 3360 2625 1155 2310 525 1050 2100)<br>(735 1470 2940 1785 3570 3045 1995 3990 3885 3675 3255 2415)<br>(117 234 468 936 1872 3744 3393 2691 1287 2574 1053 2106)<br>(351 702 1404 2808 1521 3042 1989 3978 3861 3627 3159 2223)<br>(975 1950 3900 3705 3315 2535)<br>(205 410 820 1640 3280 2465 835 1670 3340 2585 1075 2150)<br>(821 1642 3284 2473 851 1702 3404 2713 1331 2662 1229 2458)<br>(823 1646 3292 2489 883 1766 3532 2969 1843 3686 3277 2459)<br>(827 1654 3308 2521 947 1894 3788 3481 2867 1639 3278 2461)<br>(273 546 1092 2184)<br>(1911 3822 3549 3003)<br>(315 630 1260 2520 945 1890 3780 3465 2835 1575 3150 2205)<br>(455 910 1820 3640 3185 2275)<br>(1755 3510 2925)<br>(683 1366 2732 1369 2738 1381 2762 1429 2858 1621 3242 2389)<br>(1367 2734 1373 2746 1397 2794 1493 2986 1877 3754 3413 2731)<br>(585 1170 2340)<br>(819 1638 3276 2457)<br>(1365 2730)<br>(1 2 4 8 16 32 64 128 256 512 1024 2048)</td>
+    <td class="tg-yw4l">Gold<br>Gold<br>Kasami</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">$\mathbb{F}_{2^{13}}$</td>
+    <td class="tg-s6z2">3<br>5<br>9<br>13<br>17<br>33<br>57<br>65<br>67<br>71<br>127<br>171<br>191<br>241<br>287<br>347<br>367<br>635<br>723<br>911<br>1243<br>1245<br>1453<br>1639<br>1691<br>2731<br>4095<br>303<br>947<br>7<br>15<br>21<br>23<br>31<br>35<br>53<br>61<br>63<br>73<br>75<br>81<br>87<br>93<br>101<br>107<br>111<br>117<br>121<br>125<br>131<br>133<br>137<br>147<br>151<br>155<br>163<br>167<br>181<br>183<br>185<br>189<br>197<br>203<br>205<br>207<br>211<br>217<br>221<br>225<br>227<br>229<br>231<br>233<br>235<br>239<br>243<br>255<br>269<br>271<br>273<br>275<br>277<br>281<br>285<br>291<br>295<br>299<br>301<br>305<br>307<br>309<br>313<br>327<br>331<br>335<br>339<br>355<br>357<br>365<br>369<br>395<br>397<br>401<br>405<br>421<br>433<br>439<br>441<br>453<br>461<br>465<br>467<br>477<br>491<br>495<br>499<br>501<br>503<br>505<br>509<br>511<br>547<br>549<br>553<br>555<br>557<br>567<br>575<br>581<br>585<br>595<br>603<br>611<br>613<br>617<br>623<br>627<br>631<br>633<br>639<br>653<br>655<br>663<br>667<br>669<br>671<br>679<br>681<br>683<br>687<br>693<br>703<br>711<br>713<br>715<br>717<br>719<br>725<br>729<br>739<br>743<br>747<br>749<br>755<br>761<br>763<br>765<br>767<br>797<br>807<br>809<br>811<br>819<br>821<br>829<br>839<br>841<br>855<br>857<br>861<br>871<br>873<br>875<br>877<br>879<br>883<br>915<br>919<br>927<br>935<br>941<br>949<br>951<br>957<br>959<br>969<br>1001<br>1005<br>1011<br>1015<br>1017<br>1023<br>1171<br>1173<br>1175<br>1189<br>1195<br>1197<br>1205<br>1211<br>1215<br>1229<br>1239<br>1247<br>1253<br>1255<br>1261<br>1263<br>1269<br>1271<br>1279<br>1323<br>1327<br>1335<br>1341<br>1355<br>1357<br>1359<br>1365<br>1367<br>1373<br>1387<br>1389<br>1391<br>1399<br>1405<br>1435<br>1435<br>1463<br>1493<br>1519<br>1523<br>1525<br>1527<br>1643<br>1647<br>1653<br>1661<br>1707<br>1709<br>1719<br>1751<br>1759<br>1771<br>1773<br>1775<br>1781<br>1789<br>1791<br>1883<br>1899<br>1911<br>1915<br>1917<br>1919<br>1951<br>1973<br>1979<br>1981<br>2013<br>2027<br>2037<br>2039<br>2047<br>2735<br>2743<br>2775<br>2795<br>2799<br>2807<br>2811<br>2907<br>2939<br>2991<br>2999<br>3007<br>3067<br>3071<br>3511<br>3519<br>3551<br>3575<br>3823<br>4031<br>11<br>19<br>27<br>29<br>39<br>41<br>55<br>69<br>77<br>79<br>83<br>85<br>89<br>91<br>95<br>97<br>99<br>109<br>115<br>119</td>
+    <td class="tg-s6z2">2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>2<br>4<br>4<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>6<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br>8<br></td>
+    <td class="tg-yw4l">(3 6 12 24 48 96 192 384 768 1536 3072 6144 4097)<br>(5 10 20 40 80 160 320 640 1280 2560 5120 2049 4098)<br>(9 18 36 72 144 288 576 1152 2304 4608 1025 2050 4100)<br>(13 26 52 104 208 416 832 1664 3328 6656 5121 2051 4102)<br>(17 34 68 136 272 544 1088 2176 4352 513 1026 2052 4101)<br>(33 66 132 264 528 1056 2112 4224 257 514 1028 2056 4112)<br>(57 114 228 456 912 1824 3648 7296 6401 4611 1031 2062 4124)<br>(65 130 260 520 1040 2080 4160 129 258 516 1032 2064 4128)<br>(67 134 268 536 1072 2144 4288 385 770 1540 3080 6160 4129)<br>(71 142 284 568 1136 2272 4544 897 1794 3588 7176 6161 4131)<br>(127 254 508 1016 2032 4064 8128 8065 7939 7687 7183 6175 4159)<br>(171 342 684 1368 2736 5472 2753 5506 2821 5642 3093 6186 4181)<br>(191 382 764 1528 3056 6112 4033 8066 7941 7691 7191 6191 4191)<br>(241 482 964 1928 3856 7712 7233 6275 4359 527 1054 2108 4216)<br>(287 574 1148 2296 4592 993 1986 3972 7944 7697 7203 6215 4239)<br>(347 694 1388 2776 5552 2913 5826 33461 6922 5653 3115 6230 4269)<br>(367 734 1468 2936 5872 3553 7106 6021 3851 7702 7213 6235 4279)<br>(635 1270 2540 5080 1969 3938 7876 7561 6931 5671 3151 6302 4413)<br>(723 1446 2892 5784 3377 6754 5317 2443 4886 1581 3162 6324 4457)<br>(911 1822 3644 7288 6385 4579 967 1934 3868 7736 7281 6371 4551)<br>(1243 2486 4972 1753 3506 7012 5833 3475 6950 5709 3227 6454 4717)<br>(1245 2490 4980 1769 3538 7076 5961 3731 7462 6733 5275 2359 4718)<br>(1453 2906 5812 3433 6866 5541 2891 5782 3373 6746 5301 2411 4822)<br>(1639 3278 6556 4921 1651 3302 6604 5017 1843 3686 7372 6553 4915)<br>(1691 3382 6764 5337 2483 4966 1741 3482 6964 5737 3283 6566 4941)<br>(2731 5462 2733 5466 2741 5482 2773 5546 2901 5802 3413 6826 5461)<br>(4095 8190 8189 8187 8183 8175 8159 8127 8063 7935 7679 7167 6143)<br>(303 606 1212 2424 4848 1505 3010 6020 3849 7698 7205 6219 4247)<br>(947 1894 3788 7576 6961 5731 3271 6542 4893 1595 3190 6380 4569)<br>(7 14 28 56 112 224 448 896 1792 3584 7168 6145 4099)<br>(15 30 60 120 240 480 960 1920 3840 7680 7169 6147 4103)<br>(21 42 84 168 336 672 1344 2688 5376 2561 5122 2053 4106)<br>(23 46 92 184 368 736 1472 2944 5888 3585 7170 6149 4107)<br>(31 62 124 248 496 992 1984 3968 7936 7681 7171 6151 4111)<br>(35 70 140 280 560 1120 2240 4480 769 1538 3076 6152 4113)<br>(53 106 212 424 848 1696 3392 6784 5377 2563 5126 2061 4122)<br>(61 122 244 488 976 1952 3904 7808 7425 6659 5127 2063 4126)<br>(63 126 252 504 1008 2016 4032 8064 7937 7683 7175 6159 4127)<br>(73 146 292 584 1168 2336 4672 1153 2306 4612 1033 2066 4132)<br>(75 150 300 600 1200 2400 4800 1409 2818 5636 3081 6162 4133)<br>(81 162 324 648 1296 2592 5184 2177 4354 517 1034 2068 4136)<br>(87 174 348 696 1392 2784 5568 2945 5890 3589 7178 6165 4139)<br>(93 186 372 744 1488 2976 5952 3713 7426 6661 5131 2071 4142)<br>(101 202 404 808 1616 3232 6464 4737 1283 2566 5132 2073 4146)<br>(107 214 428 856 1712 3424 6848 5505 2819 5638 3085 6170 4149)<br>(111 222 444 888 1776 3552 7104 6017 3843 7686 7181 6171 4151)<br>(117 234 468 936 1872 3744 7488 6785 5379 2567 5134 2077 4154)<br>(121 242 484 968 1936 3872 7744 7297 6403 4615 1039 2078 4156)<br>(125 250 500 1000 2000 4000 8000 7809 7427 6663 5135 2079 4158)<br>(131 262 524 1048 2096 4192 193 386 772 1544 3088 6176 4161)<br>(133 266 532 1064 2128 4256 321 642 1284 2568 5136 2081 4162)<br>(137 274 548 1096 2192 4384 577 1154 2308 4616 1041 2082 4164)<br>(147 294 588 1176 2352 4704 1217 2434 4868 1545 3090 6180 4169)<br>(151 302 604 1208 2416 4832 1473 2946 5892 3593 7186 6181 4171)<br>(155 310 620 1240 2480 4960 1729 3458 6916 5641 3091 6182 4173)<br>(163 326 652 1304 2608 5216 2241 4482 773 1546 3092 6184 4177)<br>(167 334 668 1336 2672 5344 2497 4994 1797 3594 7188 6185 4179)<br>(181 362 724 1448 2896 5792 3393 6786 5381 2571 5142 2093 4186)<br>(183 366 732 1464 2928 5856 3521 7042 5893 3595 7190 6189 4187)<br>(185 370 740 1480 2960 5920 3649 7298 6405 4619 1047 2094 4188)<br>(189 378 756 1512 3024 6048 3905 7810 7429 6667 5143 2095 4190)<br>(197 394 788 1576 3152 6304 4417 643 1286 2572 5144 2097 4194)<br>(203 406 812 1624 3248 6496 4801 1411 2822 5644 3097 6194 4197)<br>(205 410 820 1640 3280 6560 4929 1667 3334 6668 5145 2099 4198)<br>(207 414 828 1656 3312 6624 5057 1923 3846 7692 7193 6195 4199)<br>(211 422 844 1688 3376 6752 5313 2435 4870 1549 3098 6196 4201)<br>(217 434 868 1736 3472 6944 5697 3203 6406 4621 1051 2102 4204)<br>(221 442 884 1768 3536 7072 5953 3715 7430 6669 5147 2103 4206)<br>(225 450 900 1800 3600 7200 6209 4227 263 526 1052 2104 4208)<br>(227 454 908 1816 3632 7264 6337 4483 775 1550 3100 6200 4209)<br>(229 458 916 1832 3664 7328 6465 4739 1287 2574 5148 2105 4210)<br>(231 462 924 1848 3696 7392 6593 4995 1799 3598 7196 6201 4211)<br>(233 466 932 1864 3728 7456 6721 5251 2311 4622 1053 2106 4212)<br>(235 470 940 1880 3760 7520 6849 5507 2823 5646 3101 6202 4213)<br>(239 478 956 1912 3824 7648 7105 6019 3847 7694 7197 6203 4215)<br>(243 486 972 1944 3888 7776 7361 6531 4871 1551 3102 6204 4217)<br>(255 510 1020 2040 4080 8160 8129 8067 7943 7695 7199 6207 4223)<br>(269 538 1076 2152 4304 417 834 1668 3336 6672 5153 2115 4230)<br>(271 542 1084 2168 4336 481 962 1924 3848 7696 7201 6211 4231)<br>(273 546 1092 2184 4368 545 1090 2180 4360 529 1058 2116 4232)<br>(275 550 1100 2200 4400 609 1218 2436 4872 1553 3106 6212 4233)<br>(277 554 1108 2216 4432 673 1346 2692 5384 2577 5154 2117 4234)<br>(281 562 1124 2248 4496 801 1602 3204 6408 4625 1059 2118 4236)<br>(285 570 1140 2280 4560 929 1858 3716 7432 6673 5155 2119 4238)<br>(291 582 1164 2328 4656 1121 2242 4484 777 1554 3108 6216 4241)<br>(295 590 1180 2360 4720 1249 2498 4996 1801 3602 7204 6217 4243)<br>(299 598 1196 2392 4784 1377 2754 5508 2825 5650 3109 6218 4245)<br>(301 602 1204 2408 4816 1441 2882 5764 3337 6674 5157 2123 4246)<br>(305 610 1220 2440 4880 1569 3138 6276 4361 531 1062 2124 4248)<br>(307 614 1228 2456 4912 1633 3266 6532 4873 1555 3110 6220 4249)<br>(309 618 1236 2472 4944 1697 3394 6788 5385 2579 5158 2125 4250)<br>(313 626 1252 2504 5008 1825 3650 7300 6409 4627 1063 2126 4252)<br>(327 654 1308 2616 5232 2273 4546 901 1802 3604 7208 6225 4259)<br>(331 662 1324 2648 5296 2401 4802 1413 2826 5652 3113 6226 4261)<br>(335 670 1340 2680 5360 2529 5058 1925 3850 7700 7209 6227 4263)<br>(339 678 1356 2712 5424 2657 5314 2437 4874 1557 3114 6228 4265)<br>(355 710 1420 2840 5680 3169 6338 4485 779 1558 3116 6232 4273)<br>(357 714 1428 2856 5712 3233 6466 4741 1291 2582 5164 2137 4274)<br>(365 730 1460 2920 5840 3489 6978 5765 3339 6678 5165 2139 4278)<br>(369 738 1476 2952 5904 3617 7234 6277 4363 535 1070 2140 4280)<br>(395 790 1580 3160 6320 4449 707 1414 2828 5656 3121 6242 4293)<br>(397 794 1588 3176 6352 4513 835 1670 3340 6680 5169 2147 4294)<br>(401 802 1604 3208 6416 4641 1091 2182 4364 537 1074 2148 4296)<br>(405 810 1620 3240 6480 4769 1347 2694 5388 2585 5170 2149 4298)<br>(421 842 1684 3368 6736 5281 2371 4742 1293 2586 5172 2153 4306)<br>(433 866 1732 3464 6928 5665 3139 6278 4365 539 1078 2156 4312)<br>(439 878 1756 3512 7024 5857 3523 7046 5901 3611 7222 6253 4315)<br>(441 882 1764 3528 7056 5921 3651 7302 6413 4635 1079 2158 4316)<br>(453 906 1812 3624 7248 6305 4419 647 1294 2588 5176 2161 4322)<br>(461 922 1844 3688 7376 6561 4931 1671 3342 6684 5177 2163 4326)<br>(465 930 1860 3720 7440 6689 5187 2183 4366 541 1082 2164 4328)<br>(467 934 1868 3736 7472 6753 6315 2439 4878 1565 3130 6260 4329)<br>(477 954 1908 3816 7632 7073 5955 3719 7438 6685 5179 2167 4334)<br>(491 982 1964 3928 7856 7521 6851 5511 2831 5662 3133 6266 4341)<br>(495 990 1980 3960 7920 7649 7107 6023 3855 7710 7229 6267 4343)<br>(499 998 1996 3992 7984 7777 7363 6535 4879 1567 3134 6268 4345)<br>(501 1002 2004 4008 8016 7841 7491 6791 5391 2591 5182 2173 4346)<br>(503 1006 2012 4024 8048 7905 7619 7047 5903 3615 7230 6269 4347)<br>(505 1010 2020 4040 8080 7969 7747 7303 6415 4639 1087 2174 4348)<br>(509 1018 2036 4072 8144 8097 8003 7815 7439 6687 5183 2175 4350)<br>(511 1022 2044 4088 8176 8161 8131 8071 7951 7711 7231 6271 4351)<br>(547 1094 2188 4376 561 1122 2244 4488 785 1570 3140 6280 4369)<br>(549 1098 2196 4392 593 1186 2372 4744 1297 2594 5188 2185 4370)<br>(553 1106 2212 4424 657 1314 2628 5256 2321 4642 1093 2186 4372)<br>(555 1110 2220 4440 689 1378 2756 5512 2833 5666 3141 6282 4373)<br>(557 1114 2228 4456 721 1442 2884 5768 3345 6690 5189 2187 4374)<br>(567 1134 2268 4536 881 1762 3524 7048 5905 3619 7238 6285 4379)<br>(575 1150 2300 4600 1009 2018 4036 8072 7953 7715 7239 6287 4383)<br>(581 1162 2324 4648 1105 2210 4420 649 1298 2596 5192 2193 4386)<br>(585 1170 2340 4680 1169 2338 4676 1161 2322 4644 1097 2194 4388)<br>(595 1190 2380 4760 1329 2658 5316 2441 4882 1573 3146 6292 4393)<br>(603 1206 2412 4824 1457 2914 5828 3465 6930 5669 3147 6294 4397)<br>(611 1222 2444 4888 1585 3170 6340 4489 787 1574 3148 6296 4401)<br>(613 1226 2452 4904 1617 3234 6468 4745 1299 2598 5196 2201 4402)<br>(617 1234 2468 4936 1681 3362 6724 5257 2323 4646 1101 2202 4404)<br>(623 1246 2492 4984 1777 3554 7108 6025 3859 7718 7245 6299 4407)<br>(627 1254 2508 5016 1841 3682 7364 6537 4883 1575 3150 6300 4409)<br>(631 1262 2524 5048 1905 3810 7620 7049 5907 3623 7246 6301 4411)<br>(633 1266 2532 5064 1937 3874 7748 7305 6419 4647 1103 2206 4412)<br>(639 1278 2556 5112 2033 4066 8132 8073 7955 7719 7247 6303 4415)<br>(653 1306 2612 5224 2257 4514 837 1674 3348 6696 5201 2211 4422)<br>(655 1310 2620 5240 2289 4578 965 1930 3860 7720 7249 6307 4423)<br>(663 1326 2652 5304 2417 4834 1477 2954 5908 3625 7250 6309 4427)<br>(667 1334 2668 5336 2481 4962 1733 3466 6932 5673 3155 6310 4429)<br>(669 1338 2676 5352 2513 5026 1861 3722 7444 6697 5203 2215 4430)<br>(671 1342 2684 5368 2545 5090 1989 3978 7956 7721 7251 6311 4431)<br>(679 1358 2716 5432 2673 5346 2501 5002 1813 3626 7252 6313 4435)<br>(681 1362 2724 5448 2705 5410 2629 5258 2325 4650 1109 2218 4436)<br>(683 1366 2732 5464 2737 5474 2757 5514 2837 5674 3157 6314 4437)<br>(687 1374 2748 5496 2801 5602 3013 6026 3861 7722 7253 6315 4439)<br>(693 1386 2772 5544 2897 5794 3397 6794 5397 2603 5206 2221 4442)<br>(703 1406 2812 5624 3057 6114 4037 8074 7957 7723 7255 6319 4447)<br>(711 1422 2844 5688 3185 6370 4549 907 1814 3628 7256 6321 4451)<br>(713 1426 2852 5704 3217 6434 4677 1163 2326 4652 1113 2226 4452)<br>(715 1430 2860 5720 3249 6498 4805 1419 2838 5676 3161 6322 4453)<br>(717 1434 2868 5736 3281 6562 4933 1675 3350 6700 5209 2227 4454)<br>(719 1438 2876 5752 3313 6626 5061 1931 3862 7724 7257 6323 4455)<br>(725 1450 2900 5800 3409 6818 5445 2699 5398 2605 5210 2229 4458)<br>(729 1458 2916 5832 3473 6946 5701 3211 6422 4653 1115 2230 4460)<br>(739 1478 2956 5912 3633 7266 6341 4491 791 1582 3164 6328 4465)<br>(743 1486 2972 5944 3697 7394 6597 5003 1815 3630 7260 6329 4467)<br>(747 1494 2988 5976 3761 7522 6853 5515 2839 5678 3165 6330 4469)<br>(749 1498 2996 5992 3793 7586 6981 5771 3351 6702 5213 2235 4470)<br>(755 1510 3020 6040 3889 7778 7365 6539 4887 1583 3166 6332 4473)<br>(761 1522 3044 6088 3985 7970 7749 7307 6423 4655 1119 2238 4476)<br>(763 1526 3052 6104 4017 8034 7877 7563 6935 5679 3167 6334 4477)<br>(765 1530 3060 6120 4049 8098 8005 7819 7447 6703 5215 2239 4478)<br>(767 1534 3068 6136 4081 8162 8133 8075 7959 7727 7263 6335 4479)<br>(797 1594 3188 6376 4561 931 1862 3724 7448 6705 5219 2247 4494)<br>(807 1614 3228 6456 4721 1251 2502 5004 1817 3634 7268 6345 4499)<br>(809 1618 3236 6472 4753 1315 2630 5260 2329 4658 1125 2250 4500)<br>(811 1622 3244 6488 4785 1379 2758 5516 2841 5682 3173 6346 4501)<br>(819 1638 3276 6552 4913 1635 3270 6540 4889 1587 3174 6348 4505)<br>(821 1642 3284 6568 4945 1699 3398 6796 5401 2611 5222 2253 4506)<br>(829 1658 3316 6632 5073 1955 3910 7820 7449 6707 5223 2255 4510)<br>(839 1678 3356 6712 5233 2275 4550 909 1818 3636 7272 6353 4515)<br>(841 1682 3364 6728 5265 2339 4678 1165 2330 4660 1129 2258 4516)<br>(855 1710 3420 6840 5489 2787 5574 2957 5914 3637 7274 6357 4523)<br>(857 1714 3428 6856 5521 2851 5702 3213 6426 4661 1131 2262 4524)<br>(861 1722 3444 6888 5585 2979 5958 3725 7450 6709 5227 2263 4526)<br>(871 1742 3484 6968 5745 3299 6598 5005 1819 3638 7276 6361 4531)<br>(873 1746 3492 6984 5777 3363 6726 5261 2331 4662 1133 2266 4532)<br>(875 1750 3500 7000 5809 3427 6854 5517 2843 5686 3181 6362 4533)<br>(877 1754 3508 7016 5841 3491 6982 5773 3355 6710 5229 2267 4534)<br>(879 1758 3516 7032 5873 3555 7110 6029 3867 7734 7277 6363 4535)<br>(883 1766 3532 7064 5937 3683 7366 6541 4891 1591 3182 6364 4537)<br>(915 1830 3660 7320 6449 4707 1223 2446 4892 1593 3186 6372 4553)<br>(919 1838 3676 7352 6513 4835 1479 2958 5916 3641 7282 6373 4555)<br>(927 1854 3708 7416 6641 5091 1991 3982 7964 7737 7283 6375 4559)<br>(935 1870 3740 7480 6769 5347 2503 5006 1821 3642 7284 6377 4563)<br>(941 1882 3764 7528 6865 5539 2887 5774 3357 6714 5237 2283 4566)<br>(949 1898 3796 7592 6993 5795 3399 6798 5405 2619 5238 2285 4570)<br>(951 1902 3804 7608 7025 5859 3527 7054 5917 3643 7286 6381 4571)<br>(957 1914 3828 7656 7121 6051 3911 7822 7453 6715 5239 2287 4574)<br>(959 1918 3836 7672 7153 6115 4039 8078 7965 7739 7287 6383 4575)<br>(969 1938 3876 7752 7313 6435 4679 1167 2334 4668 1145 2290 4580)<br>(1001 2002 4004 8008 7825 7459 6727 5263 2335 4670 1149 2298 4596)<br>(1005 2010 4020 8040 7889 7587 6983 5775 3359 6718 5245 2299 4598)<br>(1011 2022 4044 8088 7985 7779 7367 6543 4895 1599 3198 6396 4601)<br>(1015 2030 4060 8120 8049 7907 7623 7055 5919 3647 7294 6397 4603)<br>(1017 2034 4068 8136 8081 7971 7751 7311 6431 4671 1151 2302 4604)<br>(1023 2046 4092 8184 8177 8163 8135 8079 7967 7743 7295 6399 4607)<br>(1171 2342 4684 1177 2354 4708 1225 2450 4900 1609 3218 6436 4681)<br>(1173 2346 4692 1193 2386 4772 1353 2706 5412 2633 5266 2341 4682)<br>(1175 2350 4700 1209 2418 4836 1481 2962 5924 3657 7314 6437 4683)<br>(1189 2378 4756 1321 2642 5284 2377 4754 1317 2634 5268 2345 4690)<br>(1195 2390 4780 1369 2738 5476 2761 5522 2853 5706 3221 6442 4693)<br>(1197 2394 4788 1385 2770 5540 2889 5778 3365 6730 5269 2347 4694)<br>(1205 2410 4820 1449 2898 5796 3401 6802 5413 2635 5270 2349 4698)<br>(1211 2422 4844 1497 2994 5988 3785 7570 6949 5707 3223 6446 4701)<br>(1215 2430 4860 1529 3058 6116 4041 8082 7973 7755 7319 6447 4703)<br>(1229 2458 4916 1641 3282 6564 4937 1683 3366 6732 5273 2355 4710)<br>(1239 2478 4956 1721 3442 6884 5577 2963 5926 3661 7322 6453 4715)<br>(1247 2494 4988 1785 3570 7140 6089 3987 7974 7757 7323 6455 4719)<br>(1253 2506 5012 1833 3666 7332 6473 4755 1319 2638 5276 2361 4722)<br>(1255 2510 5020 1849 3698 7396 6601 5011 1831 3662 7324 6457 4723)<br>(1261 2522 5044 1897 3794 7588 6985 5779 3367 6734 5277 2363 4726)<br>(1263 2526 5052 1913 3826 7652 7113 6035 3879 7758 7325 6459 4727)<br>(1269 2538 5076 1961 3922 7844 7497 6803 5415 2639 5278 2365 4730)<br>(1271 2542 5084 1977 3954 7908 7625 7059 5927 3663 7326 6461 4731)<br>(1279 2558 5116 2041 4082 8164 8137 8083 7975 7759 7327 6463 4735)<br>(1323 2646 5292 2393 4786 1381 2762 5524 2857 5714 3237 6474 4757)<br>(1327 2654 5308 2425 4850 1509 3018 6036 3881 7762 7333 6475 4759)<br>(1335 2670 5340 2489 4978 1765 3530 7060 5929 3667 7334 6477 4763)<br>(1341 2682 5364 2537 5074 1957 3914 7828 7465 6739 5287 2383 4766)<br>(1355 2710 5420 2649 5298 2405 4810 1429 2858 5716 3241 6482 4773)<br>(1357 2714 5428 2665 5330 2469 4938 1685 3370 6740 5289 2387 4774)<br>(1359 2718 5436 2681 5362 2533 5066 1941 3882 7764 7337 6483 4775)<br>(1365 2730 5460 2729 5458 2725 5450 2709 5418 2645 5290 2389 4778)<br>(1367 2734 5468 2745 5490 2789 5578 2965 5930 3669 7338 6485 4779)<br>(1373 2746 5492 2793 5586 2981 5962 3733 7466 6741 5291 2391 4782)<br>(1387 2774 5548 2905 5810 3429 6858 5525 2859 5718 3245 6490 4789)<br>(1389 2778 5556 2921 5842 3493 6986 5781 3371 6742 5293 2395 4790)<br>(1391 2782 5564 2937 5874 3557 7114 6037 3883 7766 7341 6491 4791)<br>(1399 2798 5596 3001 6002 3813 7626 7061 5931 3671 7342 6493 4795)<br>(1405 2810 5620 3049 6098 4005 8010 7829 7467 6743 5295 2399 4798)<br>(1435 2870 5740 3289 6578 4965 1739 3478 6956 5721 3251 6502 4813)<br>(1455 2910 5820 3449 6898 5605 3019 6038 3885 7770 7349 6507 4823)<br>(1463 2926 5852 3513 7026 5861 3531 7062 5933 3675 7350 6509 4827)<br>(1493 2986 5972 3753 7506 6821 5451 2711 5422 2653 5306 2421 4842)<br>(1519 3038 6076 3961 7922 7653 7115 6039 3887 7774 7357 6523 4855)<br>(1523 3046 6092 3993 7986 7781 7371 6551 4911 1631 3262 6524 4857)<br>(1525 3050 6100 4009 8018 7845 7499 6807 5423 2655 5310 2429 4858)<br>(1527 3054 6108 4025 8050 7909 7627 7063 5935 3679 7358 6525 4859)<br>(1643 3286 6572 4953 1715 3430 6860 5529 2867 5734 3277 6554 4917)<br>(1647 3294 6588 4985 1779 3558 7116 6041 3891 7782 7373 6555 4919)<br>(1653 3306 6612 5033 1875 3750 7500 6809 5427 2663 5326 2461 4922)<br>(1661 3322 6644 5097 2003 4006 8012 7833 7475 6759 5327 2463 4926)<br>(1707 3414 6828 5465 2739 5478 2765 5530 2869 5738 3285 6570 4949)<br>(1709 3418 6836 5481 2771 5542 2893 5786 3381 6762 5333 2475 4950)<br>(1719 3438 6876 5561 2931 5862 3533 7066 5941 3691 7382 6573 4955)<br>(1751 3502 7004 5817 3443 6886 5581 2971 5942 3693 7386 6581 4971)<br>(1759 3518 7036 5881 3571 7142 6093 3995 7990 7789 7387 6583 4975)<br>(1771 3542 7084 5977 3763 7526 6861 5531 2871 5742 3293 6586 4981)<br>(1773 3546 7092 5993 3795 7590 6989 5787 3383 6766 5341 2491 4982)<br>(1775 3550 7100 6009 3827 7654 7117 6043 3895 7790 7389 6587 4983)<br>(1781 3562 7124 6057 3923 7846 7501 6811 5431 2671 5342 2493 4986)<br>(1789 3578 7156 6121 4051 8102 8013 7835 7479 6767 5343 2495 4990)<br>(1791 3582 7164 6137 4083 8166 8141 8091 7991 7791 7391 6591 4991)<br>(1883 3766 7532 6873 5555 2919 5838 3485 6970 5749 3307 6614 5037)<br>(1899 3798 7596 7001 5811 3431 6862 5533 2875 5750 3309 6618 5045)<br>(1911 3822 7644 7097 6003 3815 7630 7069 5947 3703 7406 6621 5051)<br>(1915 3830 7660 7129 6067 3943 7886 7581 6971 5751 3311 6622 5053)<br>(1917 3834 7668 7145 6099 4007 8014 7837 7483 6775 5359 2527 5054)<br>(1919 3838 7676 7161 6131 4071 8142 8093 7995 7799 7407 6623 5055)<br>(1951 3902 7804 7417 6643 5095 1999 3998 7996 7801 7411 6631 5071)<br>(1973 3946 7892 7593 6995 5799 3407 6814 5437 2683 5366 2541 5082)<br>(1979 3958 7916 7641 7091 5991 3791 7582 6973 5755 3319 6638 5085)<br>(1981 3962 7924 7657 7123 6055 3919 7838 7485 6779 5367 2543 5086)<br>(2013 4026 8052 7913 7635 7079 5967 3743 7486 6781 5371 2551 5102)<br>(2027 4054 8108 8025 7859 7527 6863 5535 2879 5758 3325 6650 5109)<br>(2037 4074 8148 8105 8019 7847 7503 6815 5439 2687 5374 2557 5114)<br>(2039 4078 8156 8121 8051 7911 7631 7071 5951 3711 7422 6653 5115)<br>(2047 4094 8188 8185 8179 8167 8143 8095 7999 7807 7423 6655 5119)<br>(2735 5470 2749 5498 2805 5610 3029 6058 3925 7850 7509 6827 5463)<br>(2743 5486 2781 5562 2933 5866 3541 7082 5973 3755 7510 6829 5467)<br>(2775 5550 2909 5818 3445 6890 5589 2987 5974 3757 7514 6837 5483)<br>(2795 5590 2989 5978 3765 7530 6869 5547 2903 5806 3421 6842 5493)<br>(2799 5598 3005 6010 3829 7658 7125 6059 3927 7854 7517 6843 5495)<br>(2807 5614 3037 6074 3957 7914 7637 7083 5975 3759 7518 6845 5499)<br>(2811 5622 3053 6106 4021 8042 7893 7595 6999 5807 3423 6846 5501)<br>(2907 5814 3437 6874 5557 2923 5846 3501 7002 5813 3435 6870 5549)<br>(2939 5878 3565 7130 6069 3947 7894 7597 7003 5815 3439 6878 5565)<br>(2991 5982 3773 7546 6901 5611 3031 6062 3933 7866 7541 6891 5591)<br>(2999 5998 3805 7610 7029 5867 3543 7086 5981 3771 7542 6893 5595)<br>(3007 6014 3837 7674 7157 6123 4055 8110 8029 7867 7543 6895 5599)<br>(3067 6134 4077 8154 8117 8043 7895 7599 7007 5823 3455 6910 5629)<br>(3071 6142 4093 8186 8181 8171 8151 8111 8031 7871 7551 6911 5631)<br>(3511 7022 5853 3515 7030 5869 3547 7094 5997 3803 7606 7021 5851)<br>(3519 7038 5885 3579 7158 6125 4059 8118 8045 7899 7607 7023 5855)<br>(3551 7102 6013 3835 7670 7149 6107 4023 8046 7901 7611 7031 5871)<br>(3575 7150 6109 4027 8054 7917 7643 7095 5999 3807 7614 7037 5883)<br>(3823 7646 7101 6011 3831 7662 7133 6075 3959 7918 7645 7099 6007)<br>(4031 8062 7933 7675 7159 6127 4063 8126 8061 7931 7671 7151 6111)<br>(11 22 44 88 176 352 704 1408 2816 5632 3073 6146 4101)<br>(19 38 76 152 304 608 1216 2432 4864 1537 3074 6148 4105)<br>(27 54 108 216 432 864 1728 3456 6912 5633 3075 6150 4109)<br>(29 58 116 232 464 928 1856 3712 7424 6657 5123 2055 4110)<br>(39 78 156 312 624 1248 2496 4992 1793 3586 7172 6153 4115)<br>(41 82 164 328 656 1312 2624 5248 2305 4610 1029 2058 4116)<br>(55 110 220 440 880 1760 3520 7040 5889 3587 7174 6157 4123)<br>(69 138 276 552 1104 2208 4416 641 1282 2564 5128 2065 4130)<br>(77 154 308 616 1232 2464 4928 1665 3330 6660 5129 2067 4134)<br>(79 158 316 632 1264 2528 5056 1921 3842 7684 7177 6163 4135)<br>(83 166 332 664 1328 2656 5312 2433 4866 1541 3082 6164 4137)<br>(85 170 340 680 1360 2720 5440 2689 5378 2565 5130 2069 4138)<br>(89 178 356 712 1424 2848 5696 3201 6402 4613 1035 2070 4140)<br>(91 182 364 728 1456 2912 5824 3457 6914 5637 3083 6166 4141)<br>(95 190 380 760 1520 3040 6080 3969 7938 7685 7179 6167 4143)<br>(97 194 388 776 1552 3104 6208 4225 259 518 1036 2072 4144)<br>(99 198 396 792 1584 3168 6336 4481 771 1542 3084 6168 4145)<br>(109 218 436 872 1744 3488 6976 5761 3331 6662 5133 2075 4150)<br>(115 230 460 920 1840 3680 7360 6529 4867 1543 3086 6172 4153)<br>(119 238 476 952 1904 3808 7616 7041 5891 3591 7182 6173 4155)</td>
+    <td class="tg-yw4l">Gold<br>Gold<br>Gold<br>Kasami<br>Gold<br>Gold<br>Kasami<br>Gold<br>Welch<br>Niho<br>Gold<br>Kasami<br>Kasami<br>Kasami<br>Kasami<br>Niho<br>Welch<br>Kasami<br>Kasami<br>Gold<br>Gold<br>Kasami<br>Gold<br>Gold<br>Kasami<br>Gold<br>Field Inverse</td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+				<div class="work">
+					<figure class="white">
+							 <img src="img/psd-4.jpg" alt="" />
+                         <div id="wrapper-part-info">
+                             <div class="part-info-image-single">
+                                <img src="img/mockup-1.jpg" alt="" width="628" height="437"/>
+                                <img src="img/mockup-2.jpg" alt="" width="628" height="437"/>
+                                <img src="img/mockup-3.jpg" alt="" width="628" height="437"/>
+                             </div>
+						 </div>
+                    </figure>	
+				
+                <div class="wrapper-text-description">
+                
+                	<div class="wrapper-view">
+                    	<div class="icon-view"><img src="img/icon-eye.svg" alt="" width="24" height="16"/></div>
+                        <div class="text-view">2,451 views</div>
+                    </div>
+                
+                	<div class="wrapper-file">
+                    	<div class="icon-file"><img src="img/icon-psdfile.svg" alt="" width="21" height="21"/></div>
+                        <div class="text-file">Photoshop</div>
+                    </div>
+                    
+                    <div class="wrapper-weight">
+                    	<div class="icon-weight"><img src="img/icon-weight.svg" alt="" width="20" height="23"/></div>
+                        <div class="text-weight">23 Mo</div>
+                    </div>
+                    
+                    <div class="wrapper-desc">
+                    	<div class="icon-desc"><img src="img/icon-desc.svg" alt="" width="24" height="24"/></div>
+                        <div class="text-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </div>
+                    </div>
+                    
+                    <div class="wrapper-download">
+                    	<div class="icon-download"><img src="img/icon-download.svg" alt="" width="19" height="26"/></div>
+                        <div class="text-download"><a href="#"><b>Download</b></a></div>
+                    </div>
+                    
+                    <div class="wrapper-morefrom">
+                    	<div class="text-morefrom">More from .psd</div>
+                        <div class="image-morefrom">
+                        	<a href="#"><div class="image-morefrom-1"><img src="img/psd-1.jpg" alt="" width="430" height="330"/></div></a>
+                            <a href="#"><div class="image-morefrom-2"><img src="img/psd-2.jpg" alt="" width="430" height="330"/></div></a>
+                            <a href="#"><div class="image-morefrom-3"><img src="img/psd-3.jpg" alt="" width="430" height="330"/></div></a>
+                            <a href="#"><div class="image-morefrom-4"><img src="img/psd-6.jpg" alt="" width="430" height="330"/></div></a>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                	<div class="post-reply">
+                    	<div class="image-reply-post"></div>
+                    	<div class="name-reply-post">Igor vlademir</div>
+                    	<div class="text-reply-post">Awesome mockup, i like it very much ! It will help me for my website i was looking for since few days. Thank you a lot.</div>
+                	</div>
+                    
+                    <div class="post-reply-2">
+                    	<div class="image-reply-post-2"></div>
+                    	<div class="name-reply-post-2">Nathan Shaw</div>
+                    	<div class="text-reply-post-2">Well done ! I like the way you did it. Awesome ! </div>
+                	</div>
+                    
+                	<div class="post-send">
+                    	<div id="main-post-send"> 
+                            <div id="title-post-send">Add your comment</div>
+							<form id="contact" method="post" action="/onclickprod/formsubmit_op.asp">
+    							<fieldset>
+									<p><textarea id="message" name="message" maxlength="500" placeholder="Votre Message" tabindex="5" cols="30" rows="4"></textarea></p>
+								</fieldset>
+								<div style="text-align:center;"><input type="submit" name="envoi" value="Envoyer" /></div>
+  							</form>
+                        </div>
+					</div>
+                </div>
+			</div>	
+		</div>
+         
+            
+	<div id="wrapper-thank">
+    	<div class="thank">
+        	<div class="thank-text">bu<span style="letter-spacing:-5px;">rs</span>tfly</div>
+    	</div>
+	</div>
+	    
+	<div id="main-container-footer">
+		<div class="container-footer">
+        	
+             <div id="row-1f">
+            	<div class="text-row-1f"><span style="font-weight:600;font-size:15px;color:#666;line-height:250%;text-transform:uppercase;letter-spacing:1.5px;">What is Burstfly</span><br>Burstfly is just a blog showcasing hand-picked free themes, design stuff, free fonts and other resources for web designers.</div>
+            </div>
+            
+            <div id="row-2f">
+            	<div class="text-row-2f"><span style="font-weight:600;font-size:15px;color:#666;line-height:250%;text-transform:uppercase;letter-spacing:1.5px;">How does it work</span><br>Burstfly offers you all the latest freebies found all over the fourth corners without to pay.</div>
+            </div>
+            
+            <div id="row-3f">
+            	<div class="text-row-3f"><span style="font-weight:600;font-size:15px;color:#666;line-height:250%;text-transform:uppercase;letter-spacing:1.5px;">Get in touch!</span><br>Subscribe our RSS or follow us on Facebook, Google+, Pinterest or Dribbble to keep updated.</div>
+            </div>
+            
+            <div id="row-4f">
+            	<div class="text-row-4f"><span style="font-weight:600;font-size:15px;color:#666;line-height:250%;text-transform:uppercase;letter-spacing:1.5px;">Newsletter</span><br>You will be informed monthly about the latest content avalaible.</div>
+
+				<div id="main_tip_newsletter"> 
+					<form>
+						<input type="text" name="newsletter" id="tip_newsletter_input" list="newsletter" autocomplete=off required>
+					</form>
+				</div>
+            </div>
+            
+		</div>
+	</div>
+    
+    
+    <div id="wrapper-copyright">
+		<div class="copyright">
+    		<div class="copy-text object">Copyright © 2016. Template by <a style="color:#D0D1D4;" href="http://designscrazed.org/">Dcrazed</a></div>
+    		
+			<div class="wrapper-navbouton">
+    			<div class="google object">g</div>
+    			<div class="facebook object">f</div>
+    			<div class="linkin object">i</div>
+    			<div class="dribbble object">d</div>
+    		</div>
+    	</div>
+    </div>
+
+</div>
+
+
+
+<!-- SCRIPT -->
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="js/jquery.localScroll.min.js"></script>
+    <script type="text/javascript" src="js/jquery-animate-css-rotate-scale.js"></script>
+	<script type="text/javascript" src="js/fastclick.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flip.min.js"></script>
+	<script type="text/javascript" src="js/jquery.animate-colors-min.js"></script>
+	<script type="text/javascript" src="js/jquery.animate-shadow-min.js"></script>    
+	<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}});</script>
+    <script type="text/javascript" src="../MathJax.js?config=TeX-AMS_HTML-full"></script>
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<script>
+	
+
+	
+$(document).ready(function() {
+		$.localScroll();
+		$(".cache").delay(1000).fadeOut(500);
+		
+		$("#wrapper-header").delay(1500).animate({opacity:'1',width:'100%'},500);
+		$("#wrapper-navbar").delay(2000).animate({opacity:'1',height:'60px'},500);
+		
+		$("#main-container-image").delay(2500).animate({opacity:'1'},500);
+		
+	});
+
+/*TRANSITION PAGE*/
+
+var speed = 'slow';
+
+$('html, body').hide();
+
+$(document).ready(function() {
+    $('html, body').fadeIn(speed, function() {
+        $('a[href], button[href]').click(function(event) {
+            var url = $(this).attr('href');
+            if (url.indexOf('#') == 0 || url.indexOf('javascript:') == 0) return;
+            event.preventDefault();
+            $('html, body').fadeOut(speed, function() {
+                window.location = url;
+            });
+        });
+    });
+});
+
+/* DISABLE HOVER EFFECT WHILE YOU SCROLL FOR A SMOOTHY NAVIGATION */
+
+var body = document.body,
+	timer;
+
+window.addEventListener('scroll', function() {
+
+	clearTimeout(timer);
+
+	if(!body.classList.contains('disable-hover'))
+		body.classList.add('disable-hover')
+
+	timer = setTimeout(function(){
+		body.classList.remove('disable-hover')
+	}, 200);
+
+}, false);
+ 
+  /* BOUTON MENU */
+
+$(document).on('touchstart mouseover', '#stripes', function(event){
+
+        event.stopPropagation();
+        event.preventDefault();
+        if(event.handled !== true) {
+			
+			   $("#stripes").stop().animate({scale:'1.2',opacity:'0.5'},300);	
+
+            event.handled = true;
+        } else {
+            return false;
+        }
+});
+
+$(document).on('touchend mouseout', '#stripes', function(event){
+	
+        event.stopPropagation();
+        event.preventDefault();
+        if(event.handled !== true) {
+			
+			   $("#stripes").stop().animate({scale:'1',opacity:'1'},300);	
+
+            event.handled = true;
+        } else {
+            return false;
+        }
+});
+
+/* MENU SIDE OPEN */
+
+var MENUSIDEOPEN = document.getElementById('stripes');
+
+MENUSIDEOPEN.addEventListener('click', function() {
+			   $("#main-container-menu").stop().animate({left:'0'},300);	
+}); 
+
+/* BOUTON CROSS */
+
+$(document).on('touchstart mouseover', '#cross-menu', function(event){
+
+        event.stopPropagation();
+        event.preventDefault();
+        if(event.handled !== true) {
+			
+			   $("#cross-menu").stop().animate({scale:'1.2',opacity:'0.5'},300);	
+
+            event.handled = true;
+        } else {
+            return false;
+        }
+});
+
+$(document).on('touchend mouseout', '#cross-menu', function(event){
+	
+        event.stopPropagation();
+        event.preventDefault();
+        if(event.handled !== true) {
+			
+			   $("#cross-menu").stop().animate({scale:'1',opacity:'1'},300);	
+
+            event.handled = true;
+        } else {
+            return false;
+        }
+});
+
+/* MENU SIDE CLOSE */
+
+var MENUSIDECLOSE = document.getElementById('cross-menu');
+
+MENUSIDECLOSE.addEventListener('click', function() {
+			   $("#main-container-menu").stop().animate({'left':'-100%'},300);	
+}); 
+
+/* BOUTON MENU ARROW-2 */
+
+$(document).on('touchstart mouseover', '#wrapper-title-2', function(event){
+
+        event.stopPropagation();
+        event.preventDefault();
+        if(event.handled !== true) {
+			
+			   $("#fleche-nav-2").stop().animate({rotate: '90deg',opacity:'1'},300);	
+
+            event.handled = true;
+        } else {
+            return false;
+        }
+});
+
+$(document).on('touchend mouseout', '#wrapper-title-2', function(event){
+	
+        event.stopPropagation();
+        event.preventDefault();
+        if(event.handled !== true) {
+			
+			   $("#fleche-nav-2").stop().animate({rotate: '0deg',opacity:'0.5'},300);	
+
+            event.handled = true;
+        } else {
+            return false;
+        }
+});
+
+/* BOUTON MENU ARROW-3 */
+
+$(document).on('touchstart mouseover', '#wrapper-title-3', function(event){
+
+        event.stopPropagation();
+        event.preventDefault();
+        if(event.handled !== true) {
+			
+			   $("#fleche-nav-3").stop().animate({rotate: '90deg',opacity:'1'},300);	
+
+            event.handled = true;
+        } else {
+            return false;
+        }
+});
+
+$(document).on('touchend mouseout', '#wrapper-title-3', function(event){
+	
+        event.stopPropagation();
+        event.preventDefault();
+        if(event.handled !== true) {
+			
+			   $("#fleche-nav-3").stop().animate({rotate: '0deg',opacity:'0.5'},300);	
+
+            event.handled = true;
+        } else {
+            return false;
+        }
+});
+
+/* BOUTON MENU */
+
+$(document).on('touchstart mouseover', '#stripes', function(event){
+
+        event.stopPropagation();
+        event.preventDefault();
+        if(event.handled !== true) {
+			
+			   $("#stripes").stop().animate({scale:'1.2',opacity:'0.5'},300);	
+
+            event.handled = true;
+        } else {
+            return false;
+        }
+});
+
+$(document).on('touchend mouseout', '#stripes', function(event){
+	
+        event.stopPropagation();
+        event.preventDefault();
+        if(event.handled !== true) {
+			
+			   $("#stripes").stop().animate({scale:'1',opacity:'1'},300);	
+
+            event.handled = true;
+        } else {
+            return false;
+        }
+});
+
+/* BOUTON NEXT */
+
+$(document).on('touchstart mouseover', '#oldnew-next', function(event){
+
+        event.stopPropagation();
+        event.preventDefault();
+        if(event.handled !== true) {
+			
+			   $("#oldnew-next").stop().animate({scale:'1.2',opacity:'0.5'},300);	
+
+            event.handled = true;
+        } else {
+            return false;
+        }
+});
+
+$(document).on('touchend mouseout', '#oldnew-next', function(event){
+	
+        event.stopPropagation();
+        event.preventDefault();
+        if(event.handled !== true) {
+			
+			   $("#oldnew-next").stop().animate({scale:'1',opacity:'1'},300);	
+
+            event.handled = true;
+        } else {
+            return false;
+        }
+});
+
+/* BOUTON PREV */
+
+$(document).on('touchstart mouseover', '#oldnew-prev', function(event){
+
+        event.stopPropagation();
+        event.preventDefault();
+        if(event.handled !== true) {
+			
+			   $("#oldnew-prev").stop().animate({scale:'1.2',opacity:'0.5'},300);	
+
+            event.handled = true;
+        } else {
+            return false;
+        }
+});
+
+$(document).on('touchend mouseout', '#oldnew-prev', function(event){
+	
+        event.stopPropagation();
+        event.preventDefault();
+        if(event.handled !== true) {
+			
+			   $("#oldnew-prev").stop().animate({scale:'1',opacity:'1'},300);	
+
+            event.handled = true;
+        } else {
+            return false;
+        }
+});
+
+
+/* BOUTON PREV */
+
+$(document).on('touchstart mouseover', '#logo', function(event){
+
+        event.stopPropagation();
+        event.preventDefault();
+        if(event.handled !== true) {
+			
+			   $("#logo").stop().animate({scale:'1.1',opacity:'0.5'},300);	
+
+            event.handled = true;
+        } else {
+            return false;
+        }
+});
+
+$(document).on('touchend mouseout', '#logo', function(event){
+	
+        event.stopPropagation();
+        event.preventDefault();
+        if(event.handled !== true) {
+			
+			   $("#logo").stop().animate({scale:'1',opacity:'1'},300);	
+
+            event.handled = true;
+        } else {
+            return false;
+        }
+});
+
+
+
+/*FORMULAIRE NEWSLETTER*/
+	
+$("form").on("submit", function(event) {
+  event.preventDefault();
+  $.post("/burstfly/form-burstfly-modified.asp",$("form").serialize(), function(data) {//alert(data);
+	});
+});
+
+</script>
+
+
+</body>
+
+
+</html>
